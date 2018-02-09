@@ -1,0 +1,49 @@
+<group-name> ::= <leader-or-leaders-possessive> <group>
+
+<leader-or-leaders-possessive> ::= <leader-and-their> | <leader-and-his>
+
+<leaders-and-their> ::= <leaders> " and their "
+
+<leaders> ::= <leader-name> " and " <leader-name> | "The King's Jesters"
+
+<leader-and-his> ::= <leader-name> <singular-possessive>
+
+<singular-possessive> ::= " and his " | "'s"
+
+<leader-name> ::= <adjective-and-first-name> <middle-initial-and-last-name> <honorific>
+
+<adjective-and-first-name> ::= <adjective> <first-name>
+
+<adjective> ::= "Smilin' " | ""
+
+<first-name> ::= "Clyde" | "Curly"
+
+<middle-initial-and-last-name> ::= <middle-initial> <last-name> | ""
+
+<middle-initial> ::= "A." | "B." # etc...
+
+<last-name> ::= "Fox" | "McCoy"
+
+<honorific> :: "'King of the Polkas'" | ""
+
+<group> ::= <descriptor> <band-or-members-or-orchestra-or-other>
+
+<band-or-members-or-orchestra-or-other> ::= "Band" | <member-nouns> | <orchestra> | "Buster Brown Gang"
+
+<member nouns> ::= "Blue Grass Boys" | "Farm Boys" | "Fox Hunters" | "Rambling Cowboys" | "Rhythm Bombadiers"
+
+<orchestra> ::= <orchestra-article-and-place> <orchestra-specialty> " Orchestra" <orchestra-suffix>
+
+<orchestra-article-and-place> ::= <orchestra-arcticle> <place>
+
+<orchestra-article> ::= "The " | ""
+
+<orchestra-place> ::= "Casa Loma " | ""
+
+<orchestra-specialty> ::= <orchestra-specialty-prefix> <orchestra-specialty-main>
+
+<orchestra-specialty-prefix> ::= "International " | ""
+
+<orchestra-specialty-main> ::= "Dance " | ""
+
+<orchestra-suffix> ::= " De Luxe" | ""
