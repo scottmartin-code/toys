@@ -53,6 +53,10 @@ function leadersAndTheir() {
 function leaders () {
 	let outputs = [
 		() => { return leaderName() + ' and ' + leaderName() },
+		() => { return firstName() + ' and ' + leaderName() },
+		() => { return lastName() + ' and ' + lastName() },
+		() => { return 'The ' + lastName() + ' Brothers' },
+		() => { return 'The ' + lastName() + ' Sisters' },
 		() => { return "The King's Jesters" }
 	];
 
@@ -82,9 +86,13 @@ function adjective () {
 
 function firstName () {
 	return randomItem([
-		'Albert', 'Bill', 'Buddy', 'Clyde', 'Donnie', 'Edward', 'Frank',
-		'Gene', 'George', 'Glen', 'Hector', 'Johnnie', 'Karl', 'Louis', 'Ray',
-		'Sammy', 'Scotty', 'Sonny', 'Thomas', 'Vaughn', 'Wilbert', 'Wilson'
+		'Abbey', 'Albert', 'Arthur', 'Bill', 'Bobby', 'Buddy', 'Carter',
+		'Clyde', 'Donnie', 'Edward', 'Edwin', 'Earl', 'Frank', 'Fred', 'Gene',
+		'George', 'Glen', 'Hank', 'Hector', 'Henry', 'Howard', 'Jack',
+		'James', 'John', 'Johnnie', 'Johnny', 'Karl', 'Louis', 'Mitchell',
+		'Ollie', 'Oscar', 'Ray', 'Roger', 'Rusty', 'Sammy', 'Scotty', 'Sonny',
+		'Stuff', 'Tab', 'Ted', 'Thomas', 'Vaughn', 'Walter', 'Wayne',
+		'Wendell', 'Wilbert', 'Willie', 'Wilson'
 	]);
 }
 
@@ -98,9 +106,14 @@ function middleInitialOrNickname () {
 
 function lastName () {
 	return randomItem([
-		'Adams', 'Balmer', 'Baranco', 'Baur', 'Bostic', 'Carlson', 'Fox',
-		'Jenkins', 'Johnson', 'Kreisler', 'Kryger', 'Lewis', 'McCoy',
-		'McDonald',	'McPartland', 'Miller', 'Mooney', 'Short', 'Williams'
+		'Adams', 'Allen', 'Ayres', 'Balmer', 'Baranco', 'Baur', 'Brown',
+		'Bostic', 'Burke', 'Carlson', 'Costa', 'Dixon', 'Fox', 'Fuller',
+		'Gershwin', 'Gray', 'Hall', 'Heier', 'Jackson', 'Jenkins', 'Johnson',
+		'Jordan', 'Kahn', 'Kaufman', 'Kaye', 'Kent', 'King', 'Kreisler',
+		'Kryger', 'Lewis', 'McCoy', 'McDonald', 'McKinley', 'McPartland',
+		'Melton', 'Miller', 'Monroe', 'Mooney', 'Pryor', 'Russels',
+		'Schneider', 'Short', 'Smith', 'Snow', 'Sparrow', 'Swift', 'Williams',
+		'Worth'
 	]);
 }
 
@@ -114,7 +127,8 @@ function groupLabel () {
 		() => { return memberNounPrefix() + ' ' + memberNouns() },
 		() => { return orchestra() },
 		() => { return randomItem([
-			'Band', 'Ensemble', 'Trio', 'Quartet', 'Quintet', 'Sextet'
+			'Band', 'Ensemble', 'Trio', 'Quartet', 'Quartette', 'Quintet',
+			'Sextet'
 			]) },
 	];
 
@@ -122,19 +136,24 @@ function groupLabel () {
 	return outputs[r]();
 }
 
+// To do: [instrument] Band e.g. marimb
+
 function memberNounPrefix () {
 	return randomItem([
-		'Blue Grass', 'Buster Brown', 'Cactus', 'City', 'Famous', 'Farm',
-		'Fox', 'Jazz', 'Marimba', 'Motor City', 'Rambling', 'Red River',
-		'Rhythm', 'Royal', 'Statler', 'Tivoli', 'Valley'
+		'Blue Grass', 'Buster Brown', 'Cactus', 'City', 'Cool', 'Famous',
+		'Farm',	'Fox', 'Jazz', 'Jolly', 'Marimba', 'Melody', 'Moana',
+		'Motor City', 'Musical', 'Rambling', 'Red River', 'Rhythm', 'Royal',
+		'Santa Fe',	'Statler', 'Texas', 'Tivoli', 'Valley'
 	]);
 }
 
 function memberNouns () {
 	return randomItem([
-		'Band', 'Bombadiers', 'Boys', 'Canadians', 'Chicagoans', 'Cowboys',
-		'Five', 'Gang', 'Hunters', 'Islanders', 'Pennsylvanians', 'Slickers',
-		'Syncopaters', 'Troopers', 'Twisters', 'Vagabonds', 'Yanks'
+		'Band', 'Bombadiers', 'Boys', 'Canadians', 'Cats', 'Chicagoans',
+		'Cowboys', 'Five', 'Gang', 'Hawaiians', 'Hunters', 'Islanders',
+		'Knights', 'Millers', 'Pennsylvanians', 'Rangers', 'Slickers',
+		'Syncopaters', 'Tornadoes', 'Troopers', 'Twisters', 'Vagabonds',
+		'Yanks'
 	]);
 }
 
@@ -157,6 +176,7 @@ function orchestraSpecialty () {
 
 function orchestraSpecialtyPrefix () {
 	let outputs = [
+		() => { return randomItem(itemChance('Folk ', 10)) },
 		() => { return randomItem(itemChance('International ', 10)) },
 		() => { return randomItem(itemChance('Specialty ', 10)) }
 	];
