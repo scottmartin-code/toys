@@ -9,7 +9,7 @@ function makeName () {
 }
 
 // To do: take chance as parameter and merge in itemChance
-function randomItem(items) {
+function randomItem (items) {
 	let r = Math.floor(Math.random() * items.length);
 	return items[r];
 }
@@ -34,26 +34,25 @@ function nameRecipe (ingredients) {
 	}
 }
 
+function randomRecipe (recipes) {
+	let r = Math.floor(Math.random() * recipes.length);
+	return recipes[r]();
+}
+
 function groupName () {
-	let outputs = [
+	return randomRecipe([
 		nameRecipe([ leaderOrLeadersPossessive(), groupLabel() ]),
 		// To do: make this less frequent
 		nameRecipe([ leaderName(), ' and the ', memberNouns() ])
-	];
-
-	let r = Math.floor(Math.random() * outputs.length);
-	return outputs[r]();
+	]);
 }
 
 function leaderOrLeadersPossessive () {
-	let outputs = [
+	return randomRecipe([
 		nameRecipe([ leaderAndHis() ]),
 		nameRecipe([ leaderAndHer() ]),
 		nameRecipe([ leadersAndTheir() ])
-	];
-
-	let r = Math.floor(Math.random() * outputs.length);
-	return outputs[r]();
+	]);
 }
 
 function leaderAndHer () {
@@ -69,30 +68,25 @@ function leadersAndTheir() {
 }
 
 function leaders () {
-	let outputs = [
+	return randomRecipe([
 		nameRecipe([ leaderName(), ' and ', leaderName() ]),
 		nameRecipe([ maleFirstName(), ' and ', leaderName() ]),
 		nameRecipe([ lastName(), ' and ', lastName() ]),
 		nameRecipe([ 'The ', lastName(), ' Brothers' ]),
 		nameRecipe([ 'The ', lastName(), ' Sisters' ]),
 		nameRecipe([ "The King's Jesters" ])
-	];
-
-	let r = Math.floor(Math.random() * outputs.length);
-	return outputs[r]();
+	]);
 }
 
 function leaderName () {
-	let names = [
+	let name = randomRecipe([
 		nameRecipe([ maleFirstName(), ' ', lastName() ]),
 		nameRecipe([ maleFirstName(), ' ', middleInitialOrNickname(),
 			' ', lastName() ])
-	];
-
-	let r = Math.floor(Math.random() * names.length);
+	]);
 
 	// To do: don't return both adjective and middle initial
-	return adjective() + names[r]() + honorific();
+	return adjective() + name + honorific();
 }
 
 function adjective () {
@@ -144,7 +138,7 @@ function honorific () {
 }
 
 function groupLabel () {
-	let outputs = [
+	return randomRecipe([
 		nameRecipe([ memberNouns() ]),
 		nameRecipe([ memberNounPrefix(), ' ', memberNouns() ]),
 		nameRecipe([ orchestra() ]),
@@ -154,10 +148,7 @@ function groupLabel () {
 				'Sextet'
 			])
 		])
-	];
-
-	let r = Math.floor(Math.random() * outputs.length);
-	return outputs[r]();
+	]);
 }
 
 // To do: [instrument] band e.g. marimba
@@ -200,24 +191,18 @@ function orchestraSpecialty () {
 }
 
 function orchestraSpecialtyPrefix () {
-	let outputs = [
+	return randomRecipe([
 		nameRecipe([ randomItem(itemChance('Folk ', 10)) ]),
 		nameRecipe([ randomItem(itemChance('International ', 10)) ]),
 		nameRecipe([ randomItem(itemChance('Specialty ', 10)) ])
-	];
-
-	let r = Math.floor(Math.random() * outputs.length);
-	return outputs[r]();
+	]);
 }
 
 function orchestraSpecialtyMain () {
-	let outputs = [
+	return randomRecipe([
 		nameRecipe([ randomItem(itemChance('Dance ', 10)) ]),
 		nameRecipe([ randomItem(itemChance('Concert ', 10)) ])
-	];
-
-	let r = Math.floor(Math.random() * outputs.length);
-	return outputs[r]();
+	]);
 }
 
 function orchestraSuffix () {
