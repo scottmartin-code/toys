@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Cantata+One');
+* {
+	font-family: "Cantata One", serif;
+}
+
+#label {
+	background-image: url(label.jpg);
+	background-repeat: none;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+#result {
+	width: 420px;
+	margin: 0 40px;
+	padding-top: 320px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.33em;
+	color: #a16d4e;
+}
+
+#generate-button {
+	margin: 1em auto;
+	font-size: 1.25em;
+	border-radius: 0.25em;
+	background: #eee;
+	padding: 0.25em;
+}
