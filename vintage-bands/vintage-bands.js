@@ -28,11 +28,17 @@ function emptyItems (number) {
 	return items;
 }
 
+function nameRecipe (ingredients) {
+	return () => {
+		return ingredients.join('');
+	}
+}
+
 function groupName () {
 	let outputs = [
-		() => { return leaderOrLeadersPossessive() + groupLabel() },
+		nameRecipe([ leaderOrLeadersPossessive(), groupLabel() ]),
 		// To do: make this less frequent
-		() => { return leaderName() + ' and the ' + memberNouns() }
+		nameRecipe([ leaderName(), ' and the ', memberNouns() ])
 	];
 
 	let r = Math.floor(Math.random() * outputs.length);
@@ -41,9 +47,9 @@ function groupName () {
 
 function leaderOrLeadersPossessive () {
 	let outputs = [
-		() => { return leaderAndHis() },
-		() => { return leaderAndHer() },
-		() => { return leadersAndTheir() }
+		nameRecipe([ leaderAndHis() ]),
+		nameRecipe([ leaderAndHer() ]),
+		nameRecipe([ leadersAndTheir() ])
 	];
 
 	let r = Math.floor(Math.random() * outputs.length);
@@ -64,12 +70,12 @@ function leadersAndTheir() {
 
 function leaders () {
 	let outputs = [
-		() => { return leaderName() + ' and ' + leaderName() },
-		() => { return maleFirstName() + ' and ' + leaderName() },
-		() => { return lastName() + ' and ' + lastName() },
-		() => { return 'The ' + lastName() + ' Brothers' },
-		() => { return 'The ' + lastName() + ' Sisters' },
-		() => { return "The King's Jesters" }
+		nameRecipe([ leaderName(), ' and ', leaderName() ]),
+		nameRecipe([ maleFirstName(), ' and ', leaderName() ]),
+		nameRecipe([ lastName(), ' and ', lastName() ]),
+		nameRecipe([ 'The ', lastName(), ' Brothers' ]),
+		nameRecipe([ 'The ', lastName(), ' Sisters' ]),
+		nameRecipe([ "The King's Jesters" ])
 	];
 
 	let r = Math.floor(Math.random() * outputs.length);
@@ -78,9 +84,9 @@ function leaders () {
 
 function leaderName () {
 	let names = [
-		() => { return maleFirstName() + ' ' + lastName() },
-		() => { return maleFirstName() + ' ' + middleInitialOrNickname()
-			+ ' ' + lastName() }
+		nameRecipe([ maleFirstName(), ' ', lastName() ]),
+		nameRecipe([ maleFirstName(), ' ', middleInitialOrNickname(),
+			' ', lastName() ])
 	];
 
 	let r = Math.floor(Math.random() * names.length);
@@ -139,13 +145,15 @@ function honorific () {
 
 function groupLabel () {
 	let outputs = [
-		() => { return memberNouns() },
-		() => { return memberNounPrefix() + ' ' + memberNouns() },
-		() => { return orchestra() },
-		() => { return randomItem([
-			'Band', 'Ensemble', 'Trio', 'Quartet', 'Quartette', 'Quintet',
-			'Sextet'
-			]) },
+		nameRecipe([ memberNouns() ]),
+		nameRecipe([ memberNounPrefix(), ' ', memberNouns() ]),
+		nameRecipe([ orchestra() ]),
+		nameRecipe([
+			randomItem([
+				'Band', 'Ensemble', 'Trio', 'Quartet', 'Quartette', 'Quintet',
+				'Sextet'
+			])
+		])
 	];
 
 	let r = Math.floor(Math.random() * outputs.length);
@@ -193,9 +201,9 @@ function orchestraSpecialty () {
 
 function orchestraSpecialtyPrefix () {
 	let outputs = [
-		() => { return randomItem(itemChance('Folk ', 10)) },
-		() => { return randomItem(itemChance('International ', 10)) },
-		() => { return randomItem(itemChance('Specialty ', 10)) }
+		nameRecipe([ randomItem(itemChance('Folk ', 10)) ]),
+		nameRecipe([ randomItem(itemChance('International ', 10)) ]),
+		nameRecipe([ randomItem(itemChance('Specialty ', 10)) ])
 	];
 
 	let r = Math.floor(Math.random() * outputs.length);
@@ -204,8 +212,8 @@ function orchestraSpecialtyPrefix () {
 
 function orchestraSpecialtyMain () {
 	let outputs = [
-		() => { return randomItem(itemChance('Dance ', 10)) },
-		() => { return randomItem(itemChance('Concert ', 10)) }
+		nameRecipe([ randomItem(itemChance('Dance ', 10)) ]),
+		nameRecipe([ randomItem(itemChance('Concert ', 10)) ])
 	];
 
 	let r = Math.floor(Math.random() * outputs.length);
