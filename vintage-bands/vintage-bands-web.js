@@ -1,4 +1,12 @@
-module.exports = groupName;
+makeName();
+
+document.getElementById('generate-button').addEventListener('click', () => {
+	makeName();
+});
+
+function makeName () {
+	document.getElementById('result').innerHTML = groupName();
+}
 
 // To do: take chance as parameter and merge in itemChance
 function randomItem () {
