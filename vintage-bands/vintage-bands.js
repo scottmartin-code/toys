@@ -114,7 +114,7 @@ function middleInitialOrNickname () {
 	return randomItem(
 		'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.',
 		'K.', 'L.', 'M.', 'N.', 'O.', 'P.', 'Q.', 'R.', 'S.', 'T.',
-		'U.', 'V.',	'W.', 'X.', 'Y.', 'Z.', '"Red"', ...emptyItems(27)
+		'U.', 'V.', 'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"', ...emptyItems(27)
 	);
 }
 
@@ -155,19 +155,21 @@ function memberNounPrefix () {
 	return randomItem(
 		'Black and White', 'Blue Grass', 'Buster Brown', 'Cabin', 'Cactus',
 		'City', 'Cool',	'Dependable', 'Dixie Lily', 'Famous', 'Farm', 'Fox',
-		'Jazz',	'Jolly', 'Marimba',	'Melody', 'Moana', 'Motor City',
-		'Musical', 'Rambling', 'Red River', 'Rhythm', 'Round Up', 'Royal',
-		'Santa Fe', 'Statler', 'Texas', 'Tivoli', 'Tympany', 'Valley'
+		'Jazz',	'Jolly', 'Lousiana', 'Marimba',	'Melody', 'Moana',
+		'Motor City', 'Musical', 'Rambling', 'Red River', 'Rhythm',
+		'Round Up', 'Royal', 'Santa Fe', 'Statler', 'Texas', 'Tivoli',
+		'Tympany', 'Valley'
 	);
 }
 
 function memberNouns () {
 	return randomItem(
 		'Band', 'Bohemians', 'Bombadiers', 'Boys', 'Canadians', 'Cats',
-		'Chicagoans', 'Cowboys', 'Five', 'Gang', 'Hawaiians', 'Highpointers',
-		'Hunters', 'Islanders', 'Knights', 'Millers', 'Pennsylvanians',
-		'Plainsmen', 'Rangers', 'Rhythmasters', 'Slickers', 'Syncopaters',
-		'Tornadoes', 'Troopers', 'Twisters', 'Vagabonds', 'Westerners', 'Yanks'
+		'Chicagoans', 'Cowboys', 'Dude Ranchers', 'Five', 'Gang', 'Hawaiians',
+		'Highpointers',	'Hunters', 'Islanders', 'Jug Stompers', 'Knights',
+		'Millers', 'Pennsylvanians', 'Plainsmen', 'Rangers', 'Rhythmasters',
+		'Rounders', 'Slickers', 'Syncopaters', 'Tornadoes', 'Troopers',
+		'Twisters',	'Vagabonds', 'Westerners', 'Yanks'
 	);
 }
 
