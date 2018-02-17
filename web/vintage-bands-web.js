@@ -81,9 +81,9 @@ function leaders () {
 
 function leaderName () {
 	let name = randomRecipe(
-		nameRecipe( maleFirstName(), ' ', lastName() ),
-		nameRecipe( maleFirstName(), ' ', middleInitialOrNickname(),
-			' ', lastName() )
+		nameRecipe(
+			maleFirstName(), ' ', middleInitialOrNickname(), lastName()
+		)
 	);
 
 	// To do: don't return both adjective and middle initial
@@ -112,9 +112,9 @@ function femaleFirstName () {
 
 function middleInitialOrNickname () {
 	return randomItem(
-		'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.',
-		'K.', 'L.', 'M.', 'N.', 'O.', 'P.', 'Q.', 'R.', 'S.', 'T.',
-		'U.', 'V.', 'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"', ...emptyItems(27)
+		'A. ', 'B. ', 'C. ', 'D. ', 'E. ', 'F. ', 'G. ', 'H. ', 'I. ', 'J. ',
+		'K. ', 'L. ', 'M. ', 'N. ', 'O. ', 'P. ', 'Q. ', 'R. ', 'S. ', 'T. ',
+		'U. ', 'V. ', 'W. ', 'X. ', 'Y. ', 'Z. ', '"Red" ', '"Scat"', ...emptyItems(27)
 	);
 }
 
@@ -175,7 +175,7 @@ function memberNouns () {
 
 function orchestra () {
 	return orchestraPlace() + orchestraSpecialty()
-		+ ' Orchestra' + orchestraSuffix();
+		+ 'Orchestra' + orchestraSuffix();
 }
 
 function orchestraArticle () {
