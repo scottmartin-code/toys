@@ -9,7 +9,7 @@ let band = require('./vintage-bands');
 
 tweet();
 
-setInterval(tweet, 1*60*1000);
+setInterval(tweet, 60*60*1000);
 
 function tweet () {
 	T.post('statuses/update', { status: band() }, tweeted);
