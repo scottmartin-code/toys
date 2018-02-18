@@ -3,13 +3,14 @@ module.exports = groupName;
 // To do: take chance as parameter and merge in itemChance
 function randomItem () {
 	let items = [...arguments];
+
 	return items[Math.floor(Math.random() * items.length)];
 }
 
 function itemChance () {
 	let chanceItems = [...arguments];
-	let chance = chanceItems.pop();
-	chanceItems.push(...emptyItems(chance));
+	let unsuccessful = chanceItems.pop() - 1;
+	chanceItems.push(...emptyItems(unsuccessful));
 	return chanceItems;
 }
 
@@ -21,35 +22,27 @@ function emptyItems (number) {
 	return items;
 }
 
-function nameRecipe () {
-	return () => {
-		return [...arguments].join('');
-	}
-}
-
-function randomRecipe () {
-	let recipes = [...arguments];
-	return recipes[Math.floor(Math.random() * recipes.length)]();
-}
-
 function groupName () {
-	return randomRecipe(
-		nameRecipe( leaderOrLeadersPossessive(), groupLabel() ),
-		// To do: make this less frequent
-		nameRecipe( leaderName(), ' and the ', memberNouns() )
+	return randomItem(
+		leaderOrLeadersPossessive() + groupLabel(),
+		leaderOrLeadersPossessive() + groupLabel(),
+		leaderOrLeadersPossessive() + groupLabel(),
+		leaderName() + ' and the ' + memberNouns()
 	);
 }
 
 function leaderOrLeadersPossessive () {
-	return randomRecipe(
-		nameRecipe( leaderAndHis() ),
-		nameRecipe( leaderAndHer() ),
-		nameRecipe( leadersAndTheir() )
+	return randomItem(
+		leaderAndHis(),
+		leaderAndHer(),
+		leadersAndTheir()
 	);
 }
 
+// To do: rethink so leaderName isn't just male
 function leaderAndHer () {
-	return femaleFirstName() + ' ' + lastName() + randomItem(' and her ', '\'s ');
+	return femaleFirstName() + ' ' + lastName()
+		+ randomItem(' and her ', '\'s ');
 }
 
 function leaderAndHis () {
@@ -61,25 +54,22 @@ function leadersAndTheir() {
 }
 
 function leaders () {
-	return randomRecipe(
-		nameRecipe( leaderName(), ' and ', leaderName() ),
-		nameRecipe( maleFirstName(), ' and ', leaderName() ),
-		nameRecipe( lastName(), ' and ', lastName() ),
-		nameRecipe( 'The ', lastName(), ' Brothers' ),
-		nameRecipe( 'The ', lastName(), ' Sisters' ),
-		nameRecipe( "The King's Jesters" )
+	return randomItem(
+		leaderName() + ' and ' + leaderName(),
+		maleFirstName() + ' and ' + leaderName(),
+		lastName() + ' and ' + lastName(),
+		'The ' + lastName() + ' Brothers',
+		'The ' + lastName() + ' Sisters',
+		"The King's Jesters"
 	);
 }
 
+// See comment above about gender
 function leaderName () {
-	let name = randomRecipe(
-		nameRecipe(
-			maleFirstName(), ' ', middleInitialOrNickname(), lastName()
-		)
-	);
+	return adjective() + maleFirstName() + ' ' + middleInitialOrNickname()
+	 + lastName() + honorific();
 
 	// To do: don't return both adjective and middle initial
-	return adjective() + name + honorific();
 }
 
 function adjective () {
@@ -99,14 +89,17 @@ function maleFirstName () {
 }
 
 function femaleFirstName () {
-	return randomItem( 'Ginny', 'Helen', 'Louise', 'Margaret', 'Rosetta' );
+	return randomItem(
+		'Ginny', 'Helen', 'Louise', 'Margaret', 'Rosetta'
+	);
 }
 
 function middleInitialOrNickname () {
 	return randomItem(
 		'A. ', 'B. ', 'C. ', 'D. ', 'E. ', 'F. ', 'G. ', 'H. ', 'I. ', 'J. ',
 		'K. ', 'L. ', 'M. ', 'N. ', 'O. ', 'P. ', 'Q. ', 'R. ', 'S. ', 'T. ',
-		'U. ', 'V. ', 'W. ', 'X. ', 'Y. ', 'Z. ', '"Red" ', '"Scat"', ...emptyItems(27)
+		'U. ', 'V. ', 'W. ', 'X. ', 'Y. ', 'Z. ', '"Red" ', '"Scat" ',
+		...emptyItems(27)
 	);
 }
 
@@ -128,16 +121,9 @@ function honorific () {
 }
 
 function groupLabel () {
-	return randomRecipe(
-		nameRecipe( memberNouns() ),
-		nameRecipe( memberNounPrefix(), ' ', memberNouns() ),
-		nameRecipe( orchestra() ),
-		nameRecipe(
-			randomItem(
-				'Band', 'Ensemble', 'Trio', 'Quartet', 'Quartette', 'Quintet',
-				'Sextet'
-			)
-		)
+	return randomItem(
+		memberNouns(), orchestra(),	memberNounPrefix() + ' ' + memberNouns(),
+		'Band', 'Ensemble', 'Trio', 'Quartet', 'Quartette', 'Quintet', 'Sextet'
 	);
 }
 
@@ -183,18 +169,11 @@ function orchestraSpecialty () {
 }
 
 function orchestraSpecialtyPrefix () {
-	return randomRecipe(
-		nameRecipe(randomItem(...itemChance('Folk ', 10))),
-		nameRecipe(randomItem(...itemChance('International ', 10))),
-		nameRecipe(randomItem(...itemChance('Specialty ', 10)))
-	);
+	return randomItem(...itemChance('Folk ', 'International ', 'Specialty ', 10));
 }
 
 function orchestraSpecialtyMain () {
-	return randomRecipe(
-		nameRecipe(randomItem(...itemChance('Dance ', 10))),
-		nameRecipe(randomItem(...itemChance('Concert ', 10)))
-	);
+	return randomItem(...itemChance('Dance ', 'Concert ', 10));
 }
 
 function orchestraSuffix () {
