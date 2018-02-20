@@ -73,24 +73,28 @@ function leaderName () {
 }
 
 function adjective () {
-	return randomItem(...itemChance('Smilin\' ', 'General ', 20));
+	return randomItem(...itemChance('Jolly', 'Smilin\' ', 'General ', 20));
 }
 
 function maleFirstName () {
 	return randomItem(
-		'Abbey', 'Albert', 'Arthur', 'Bill', 'Bobby', 'Buddy', 'Carter',
+		'Abbey', 'Albert', 'Arthur', 'Bill', 'Bob', 'Bobby', 'Buddy', 'Carter',
 		'Clyde', 'Donnie', 'Eddie', 'Edward', 'Edwin', 'Earl', 'Frank',
 		'Fred', 'Gene',	'George', 'Glen', 'Hank', 'Hector', 'Henry', 'Howard',
-		'Jack',	'James', 'John', 'Johnnie', 'Johnny', 'Karl', 'Louis',
-		'Mitchell', 'Ollie', 'Oscar', 'Ray', 'Roger', 'Rusty', 'Sammy',
-		'Scotty', 'Sonny', 'Stuff', 'Tab', 'Ted', 'Tharpe', 'Thomas',
-		'Vaughn', 'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie', 'Wilson'
+		'Jack',	'James', 'John', 'Johnnie', 'Johnny', 'Karl', 'Louis', 'Lowell',
+		'Mitchell', 'Ollie', 'Oscar', 'Pee Wee', 'Ray', 'Robin', 'Roger',
+		'Rusty', 'Sammy', 'Scotty', 'Seymour', 'Sonny', 'Stuff', 'Tab', 'Ted',
+		'Thomas', 'Vaughn', 'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie',
+		'Wilson'
 	);
 }
 
 function femaleFirstName () {
 	return randomItem(
-		'Ginny', 'Helen', 'Louise', 'Margaret', 'Rosetta'
+		'Anita', 'Bessie', 'Carrie', 'Connie', 'Ellen', 'Ginny', 'Gloria',
+		'Helen', 'June', 'Kitty', 'Louise', 'Margaret', 'Marie', 'Marion',
+		'Martha', 'Mary', 'Maxine', 'Nellie', 'Olive', 'Rosetta', 'Ruby',
+		'Shannon', 'Virginia', 'Vivian'
 	);
 }
 
@@ -105,25 +109,30 @@ function middleInitialOrNickname () {
 
 function lastName () {
 	return randomItem(
-		'Adams', 'Allen', 'Ayres', 'Balmer', 'Baranco', 'Baur', 'Brown',
-		'Bostic', 'Burke', 'Carlson', 'Cletro', 'Costa', 'Dixon', 'Fox',
-		'Fuller', 'Gershwin', 'Gray', 'Hall', 'Heier', 'Jackson', 'Jenkins',
-		'Johnson', 'Jordan', 'Kahn', 'Kaufman', 'Kaye', 'Kent', 'King',
-		'Kreisler',	'Kryger', 'Lewis', 'Maddox', 'McCoy', 'McDonald',
-		'McKinley', 'McPartland', 'Melton', 'Miller', 'Monroe', 'Mooney',
+		'Adair', 'Adams', 'Allen', 'Ayres', 'Balmer', 'Baranco', 'Baur',
+		'Bechet', 'Brown', 'Bostic', 'Burke', 'Carlson', 'Cletro', 'Crayton',
+		'Crosby', 'Costa', 'Dixon', 'Fox', 'Fuller', 'Gershwin', 'Gray',
+		'Hall', 'Heier', 'Jackson', 'Jenkins', 'Johnson', 'Jordan', 'Kahn',
+		'Kaufman', 'Kaye', 'Kent', 'King', 'Kreisler', 'Kryger', 'Lane',
+		'Lewis', 'Maddox', 'McCoy', 'McDonald', 'McGhee', 'McKinley',
+		'McPartland', 'Melton', 'Miller', 'Monroe', 'Mooney', 'Powers',
 		'Pryor', 'Russels', 'Schneider', 'Simms', 'Short', 'Smith', 'Snow',
-		'Sparrow', 'Swift', 'Williams', 'Worth'
+		'Sparrow', 'Swift', 'Tharpe', 'Williams', 'Worth'
 	);
 }
 
 function honorific () {
-	return randomItem(...itemChance(' "King of the Polkas"', 20));
+	return randomItem(
+		...itemChance(' "King of the Polkas"', ' "The Crooning Troubador"', 30)
+	);
 }
 
 function groupLabel () {
 	return randomItem(
 		memberNouns(), orchestra(),	memberNounPrefix() + ' ' + memberNouns(),
-		'Band', 'Ensemble', 'Trio', 'Quartet', 'Quartette', 'Quintet', 'Sextet'
+		'Band', 'Barn Dance Trio', 'Ensemble', 'Five', 'Three Blazers', 'Trio',
+		'Quartet', 'Quartette', 'Quintet', 'Sax-O-Tette', 'Sextet',
+		'Symphonette'
 	);
 }
 
@@ -131,23 +140,28 @@ function groupLabel () {
 // To do: place prefix members e.g. "Grand Canyon Cabin Boys"
 function memberNounPrefix () {
 	return randomItem(
-		'Black and White', 'Blue Grass', 'Buster Brown', 'Cabin', 'Cactus',
-		'City', 'Cool',	'Dependable', 'Dixie Lily', 'Famous', 'Farm', 'Fox',
-		'Jazz',	'Jolly', 'Lousiana', 'Marimba',	'Melody', 'Moana',
-		'Motor City', 'Musical', 'Rambling', 'Red River', 'Rhythm',
-		'Round Up', 'Royal', 'Santa Fe', 'Statler', 'Texas', 'Tivoli',
-		'Tympany', 'Valley'
+		'Black and White', 'Blue Grass', 'Boogie Woogie', 'Buster Brown',
+		'Cabin', 'Cactus', 'Campus', 'City', 'Cool', 'Dependable',
+		'Dixie Lily', 'Famous', 'Farm', 'Fox', 'Hollywood', 'Hot Box', 'Jazz',
+		'Jolly', 'Lousiana', 'Marimba',	'Master', 'Melody', 'Moana',
+		'Motor City', 'Musical', 'New Orleans', 'Prairie', 'Rambling',
+		'Red River', 'Rhythm', 'Round Up', 'Royal', 'Santa Fe',
+		'Smoky Mountain', 'Statler', 'Texas', 'Tivoli',	'Tympany', 'Valley',
+		'Varsity'
 	);
 }
 
 function memberNouns () {
 	return randomItem(
-		'Band', 'Bohemians', 'Bombadiers', 'Boys', 'Canadians', 'Cats',
-		'Chicagoans', 'Cowboys', 'Dude Ranchers', 'Five', 'Gang', 'Hawaiians',
-		'Highpointers',	'Hunters', 'Islanders', 'Jug Stompers', 'Knights',
-		'Millers', 'Pennsylvanians', 'Plainsmen', 'Rangers', 'Rhythmasters',
-		'Rounders', 'Slickers', 'Syncopaters', 'Tornadoes', 'Troopers',
-		'Twisters',	'Vagabonds', 'Westerners', 'Yanks'
+		'Band', 'Bob Cats', 'Bohemians', 'Bombadiers', 'Boys', 'Briarhoppers',
+		'Canadians', 'Caroleers', 'Cats', 'Chicagoans', 'Cornellians',
+		'Cowboys', 'Dude Ranchers', 'Feetwarmers', 'Gang', 'Girls',
+		'Girls of the Golden West', 'Hawaiians', 'Highpointers', 'Hounds',
+		'Hunters', 'Islanders', 'Jug Stompers', 'Knights', 'Melody Makers',
+		'Millers', 'Pennsylvanians', 'Plainsmen', 'Ramblers', 'Rangers',
+		'Rhythmasters',	'Rounders', 'Slickers', 'Sons of the Golden West',
+		'Syncopaters', 'Tornadoes', 'Troopers',	'Twisters', 'Vagabonds',
+		'Westerners', 'Yanks'
 	);
 }
 
