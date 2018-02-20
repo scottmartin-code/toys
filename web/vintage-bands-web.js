@@ -81,7 +81,7 @@ function leaderName () {
 }
 
 function adjective () {
-	return randomItem(...itemChance('Jolly', 'Smilin\' ', 'General ', 20));
+	return randomItem(...itemChance('Jolly ', 'Smilin\' ', 'General ', 20));
 }
 
 function maleFirstName () {
@@ -137,25 +137,33 @@ function honorific () {
 
 function groupLabel () {
 	return randomItem(
-		memberNouns(), orchestra(),	memberNounPrefix() + ' ' + memberNouns(),
+		memberNouns(),
+		memberNounPrefix() + ' ' + memberNouns(),
+		groupPlace() + ' ' + memberNounPrefix() + ' ' + memberNouns(),
+		groupPlace() + ' ' + memberNouns(),
+		orchestra(),
 		'Band', 'Barn Dance Trio', 'Ensemble', 'Five', 'Three Blazers', 'Trio',
 		'Quartet', 'Quartette', 'Quintet', 'Sax-O-Tette', 'Sextet',
 		'Symphonette'
 	);
 }
 
+function groupPlace () {
+	return randomItem(
+		'Campus', 'City', 'Farm', 'Grand Canyon', 'Hollywood', 'Lousiana',
+		'Motor City', 'New Orleans', 'Prairie', 'Red River', 'Santa Fe',
+		'Smoky Mountain', 'Texas', 'Valley'
+	);
+}
+
 // To do: [instrument] band e.g. marimba
-// To do: place prefix members e.g. "Grand Canyon Cabin Boys"
 function memberNounPrefix () {
 	return randomItem(
 		'Black and White', 'Blue Grass', 'Boogie Woogie', 'Buster Brown',
-		'Cabin', 'Cactus', 'Campus', 'City', 'Cool', 'Dependable',
-		'Dixie Lily', 'Famous', 'Farm', 'Fox', 'Hollywood', 'Hot Box', 'Jazz',
-		'Jolly', 'Lousiana', 'Marimba',	'Master', 'Melody', 'Moana',
-		'Motor City', 'Musical', 'New Orleans', 'Prairie', 'Rambling',
-		'Red River', 'Rhythm', 'Round Up', 'Royal', 'Santa Fe',
-		'Smoky Mountain', 'Statler', 'Texas', 'Tivoli',	'Tympany', 'Valley',
-		'Varsity'
+		'Cabin', 'Cactus', 'Cool', 'Dependable', 'Dixie Lily', 'Famous',
+		'Fox', 'Hot Box', 'Jazz', 'Jolly', 'Marimba', 'Master', 'Melody',
+		'Moana', 'Musical', 'Rambling', 'Rhythm', 'Round Up', 'Royal',
+		'Statler', 'Tivoli', 'Tympany', 'Varsity'
 	);
 }
 
