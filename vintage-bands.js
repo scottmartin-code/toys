@@ -27,7 +27,8 @@ function groupName () {
 		leaderOrLeadersPossessive() + groupLabel(),
 		leaderOrLeadersPossessive() + groupLabel(),
 		leaderOrLeadersPossessive() + groupLabel(),
-		leaderName() + ' and the ' + memberNouns()
+		maleLeaderName() + ' and the ' + memberNouns(),
+		femaleLeaderName() + ' and the ' + memberNouns()
 	);
 }
 
@@ -39,14 +40,13 @@ function leaderOrLeadersPossessive () {
 	);
 }
 
-// To do: rethink so leaderName isn't just male
 function leaderAndHer () {
 	return femaleFirstName() + ' ' + lastName()
 		+ randomItem(' and her ', '\'s ');
 }
 
 function leaderAndHis () {
-	return leaderName() + randomItem(' and his ', '\'s ');
+	return maleLeaderName() + randomItem(' and his ', '\'s ');
 }
 
 function leadersAndTheir() {
@@ -55,8 +55,9 @@ function leadersAndTheir() {
 
 function leaders () {
 	return randomItem(
-		leaderName() + ' and ' + leaderName(),
-		maleFirstName() + ' and ' + leaderName(),
+		maleLeaderName() + ' and ' + maleLeaderName(),
+		maleFirstName() + ' and ' + maleLeaderName(),
+		femaleFirstName() + ' and ' + femaleLeaderName(),
 		lastName() + ' and ' + lastName(),
 		'The ' + lastName() + ' Brothers',
 		'The ' + lastName() + ' Sisters',
@@ -64,12 +65,15 @@ function leaders () {
 	);
 }
 
-// See comment above about gender
-function leaderName () {
-	return adjective() + maleFirstName() + ' ' + middleInitialOrNickname()
-	 + lastName() + honorific();
+function maleLeaderName () {
+	return randomItem(
+		adjective() + maleFirstName() + ' ' + lastName(),
+		maleFirstName() + ' ' + middleInitialOrNickname() + lastName()
+	) + honorific();
+}
 
-	// To do: don't return both adjective and middle initial
+function femaleLeaderName () {
+	return femaleFirstName() + ' ' + lastName();
 }
 
 function adjective () {
