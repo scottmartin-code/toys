@@ -1,5 +1,7 @@
 module.exports = groupName;
 
+// -- Start
+
 // To do: take chance as parameter and merge in itemChance
 function randomItem () {
 	let items = [...arguments];
@@ -135,71 +137,86 @@ function groupLabel () {
 	return randomItem(
 		memberNouns(),
 		memberNounPrefix() + ' ' + memberNouns(),
-		groupPlace() + ' ' + memberNounPrefix() + ' ' + memberNouns(),
-		groupPlace() + ' ' + memberNouns(),
+		place() + ' ' + memberNounPrefix() + ' ' + memberNouns(),
+		place() + ' ' + memberNouns(),
+		memberNounPrefix() + ' ' + groupNumeric(),
+		instrument() + ' ' + groupNumeric(),
+		groupNumeric(),
 		orchestra(),
-		'Band', 'Barn Dance Trio', 'Ensemble', 'Five', 'Three Blazers', 'Trio',
-		'Quartet', 'Quartette', 'Quintet', 'Sax-O-Tette', 'Sextet',
-		'Symphonette'
+		orchestra(),
+		orchestra(),
+		orchestra(),
 	);
 }
 
-function groupPlace () {
+function place () {
 	return randomItem(
-		'Campus', 'City', 'Farm', 'Grand Canyon', 'Hollywood', 'Lousiana',
-		'Motor City', 'New Orleans', 'Prairie', 'Red River', 'Santa Fe',
-		'Smoky Mountain', 'Texas', 'Valley'
+		'Casa Loma', 'Campus', 'City', 'Farm', 'Grand Canyon', 'Hollywood',
+		'Lousiana', 'Motor City', 'New Orleans', 'Prairie', 'Red River',
+		'Santa Fe', 'Smoky Mountain', 'Texas', 'Valley'
 	);
 }
 
-// To do: [instrument] band e.g. marimba
+function instrument () {
+	return randomItem(
+		...itemChance('Jug', 'Marimba', 'Saxophone', 'Tympany', 20)
+	);
+}
+
+function groupNumeric () {
+	return randomItem(
+		'Band', 'Ensemble', 'Five', 'Trio', 'Quartet', 'Quartette', 'Quintet',
+		'Sax-O-Tette', 'Sextet', 'Symphonette'
+	);
+}
+
 function memberNounPrefix () {
 	return randomItem(
-		'Black and White', 'Blue Grass', 'Boogie Woogie', 'Buster Brown',
-		'Cabin', 'Cactus', 'Cool', 'Dependable', 'Dixie Lily', 'Famous',
-		'Fox', 'Hot Box', 'Jazz', 'Jolly', 'Marimba', 'Master', 'Melody',
-		'Moana', 'Musical', 'Rambling', 'Rhythm', 'Round Up', 'Royal',
-		'Statler', 'Tivoli', 'Tympany', 'Varsity'
+		'All Star', 'Barn Dance', 'Black and White', 'Blue Grass',
+		'Boogie Woogie', 'Buster Brown', 'Cabin', 'Cactus', 'Cool',
+		'Dependable', 'Dixie Lily', 'Famous', 'Fox', 'Happiness', 'Hot Box',
+		'Jazz', 'Jolly', 'Marimba', 'Master', 'Melody', 'Moana', 'Musical',
+		'Rambling', 'Rhythm', 'Round Up', 'Royal', 'Statler', 'Tivoli',
+		'Varsity'
 	);
 }
 
 function memberNouns () {
 	return randomItem(
-		'Band', 'Bob Cats', 'Bohemians', 'Bombadiers', 'Boys', 'Briarhoppers',
-		'Canadians', 'Caroleers', 'Cats', 'Chicagoans', 'Cornellians',
-		'Cowboys', 'Dude Ranchers', 'Feetwarmers', 'Gang', 'Girls',
-		'Girls of the Golden West', 'Hawaiians', 'Highpointers', 'Hounds',
-		'Hunters', 'Islanders', 'Jug Stompers', 'Knights', 'Melody Makers',
-		'Millers', 'Pennsylvanians', 'Plainsmen', 'Ramblers', 'Rangers',
-		'Rhythmasters',	'Rounders', 'Slickers', 'Sons of the Golden West',
-		'Syncopaters', 'Tornadoes', 'Troopers',	'Twisters', 'Vagabonds',
-		'Westerners', 'Yanks'
+		'Band', 'Blazers', 'Bob Cats', 'Bohemians', 'Bombadiers', 'Boys',
+		'Briarhoppers', 'Canadians', 'Caroleers', 'Cats', 'Chicagoans',
+		'Cornellians', 'Cowboys', 'Dude Ranchers', 'Feetwarmers', 'Gang',
+		'Girls', 'Girls of the Golden West', 'Hawaiians', 'Highpointers',
+		'Hounds', 'Hunters', 'Islanders', 'Stompers', 'Knights',
+		'Melody Makers', 'Millers', 'Pennsylvanians', 'Plainsmen', 'Ramblers',
+		'Rangers', 'Rhythmasters', 'Rounders', 'Slickers',
+		'Sons of the Golden West', 'Syncopaters', 'Swing Wing', 'Tornadoes',
+		'Troopers', 'Twisters', 'Vagabonds', 'Westerners', 'Yanks'
 	);
 }
 
 function orchestra () {
-	return orchestraPlace() + orchestraSpecialty()
-		+ 'Orchestra' + orchestraSuffix();
-}
-
-function orchestraArticle () {
-	return randomItem(...itemChance('The ', 2));
+	return randomItem(
+		orchestraPlace() + ' ' + orchestraSpecialty(),
+		orchestraPlace() + ' ',
+		orchestraSpecialty(),
+	) + 'Orchestra' + orchestraSuffix();
 }
 
 function orchestraPlace () {
-	return randomItem(...itemChance('Casa Loma ', 10));
+	return randomItem(...itemChance(place(), 5));
 }
 
 function orchestraSpecialty () {
-	return orchestraSpecialtyPrefix() + orchestraSpecialtyMain();
+	return orchestraSpecialtyPrefix() + ' ' + orchestraSpecialtyMain();
 }
 
 function orchestraSpecialtyPrefix () {
-	return randomItem(...itemChance('Folk ', 'International ', 'Specialty ', 10));
+	return randomItem(...itemChance('International ', 'Specialty ', 5));
 }
 
 function orchestraSpecialtyMain () {
-	return randomItem(...itemChance('Dance ', 'Concert ', 10));
+	return randomItem(...itemChance('Dance ', 'Concert ', 'Folk ', 5));
 }
 
 function orchestraSuffix () {
