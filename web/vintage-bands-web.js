@@ -205,8 +205,8 @@ function memberNouns () {
 
 function orchestra () {
 	return randomItem(
-		orchestraPlace() + ' ' + orchestraSpecialty(),
-		orchestraPlace() + ' ',
+		place() + ' ' + orchestraSpecialty(), // here
+		place() + ' ',
 		orchestraSpecialty(),
 	) + 'Orchestra' + orchestraSuffix();
 }
@@ -216,7 +216,7 @@ function orchestraPlace () {
 }
 
 function orchestraSpecialty () {
-	return orchestraSpecialtyPrefix() + ' ' + orchestraSpecialtyMain();
+	return orchestraSpecialtyPrefix() + orchestraSpecialtyMain();
 }
 
 function orchestraSpecialtyPrefix () {

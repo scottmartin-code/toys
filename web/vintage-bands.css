@@ -19,6 +19,8 @@
 	font-weight: bold;
 	font-size: 1.33em;
 	color: #a16d4e;
+	white-space: pre-wrap;
+}
 
 #generate-button {
 	margin: 1em auto;
