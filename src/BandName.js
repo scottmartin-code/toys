@@ -1,6 +1,4 @@
-module.exports = groupName;
-
-// -- Start
+module.exports.bandName = bandName;
 
 // To do: take chance as parameter and merge in itemChance
 function randomItem () {
@@ -24,11 +22,11 @@ function emptyItems (number) {
 	return items;
 }
 
-function groupName () {
+function bandName () {
 	return randomItem(
-		leaderOrLeadersPossessive() + groupLabel(),
-		leaderOrLeadersPossessive() + groupLabel(),
-		leaderOrLeadersPossessive() + groupLabel(),
+		leaderOrLeadersPossessive() + bandLabel(),
+		leaderOrLeadersPossessive() + bandLabel(),
+		leaderOrLeadersPossessive() + bandLabel(),
 		maleLeaderName() + ' and the ' + memberNouns(),
 		femaleLeaderName() + ' and the ' + memberNouns()
 	);
@@ -133,15 +131,15 @@ function honorific () {
 	);
 }
 
-function groupLabel () {
+function bandLabel () {
 	return randomItem(
 		memberNouns(),
 		memberNounPrefix() + ' ' + memberNouns(),
 		place() + ' ' + memberNounPrefix() + ' ' + memberNouns(),
 		place() + ' ' + memberNouns(),
-		memberNounPrefix() + ' ' + groupNumeric(),
-		instrument() + ' ' + groupNumeric(),
-		groupNumeric(),
+		memberNounPrefix() + ' ' + bandNumeric(),
+		instrument() + ' ' + bandNumeric(),
+		bandNumeric(),
 		orchestra(),
 		orchestra(),
 		orchestra(),
@@ -163,7 +161,7 @@ function instrument () {
 	);
 }
 
-function groupNumeric () {
+function bandNumeric () {
 	return randomItem(
 		'Band', 'Ensemble', 'Five', 'Trio', 'Quartet', 'Quartette', 'Quintet',
 		'Sax-O-Tette', 'Sextet', 'Symphonette'

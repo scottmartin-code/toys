@@ -1,23 +1,20 @@
 'use strict';
 
-// Based on Daniel Shiffman's tutorial: http://shiffman.net/a2z/twitter-bots/
-let Twit = require('twit');
+const Twit     = require('twit');
+const bandName = require('../src/BandName.js').bandName;
 
 let twitter;
 
-if (process.env.consumer_key) {
+try {
 	twitter = new Twit({
 		consumer_key:        process.env.consumer_key,
 		consumer_secret:     process.env.consumer_secret,
 		access_token:        process.env.access_token,
 		access_token_secret: process.env.access_token_secret
 	});
-} else {
-	const config = require('./config.js');
-	twitter = new Twit(config);
+} catch(err) {
+	throw new Error('Twitter API credentials not loaded, is .envrc present?');
 }
-
-let band = require('./vintage-bands');
 
 // Post on startup
 tweet();
@@ -25,7 +22,7 @@ tweet();
 setInterval(tweet, 60*60*1000);
 
 function tweet () {
-	twitter.post('statuses/update', { status: band() }, tweeted);
+	twitter.post('statuses/update', { status: bandName() }, tweeted);
 
 	function tweeted(err, data, response) {
 		if (err) {
