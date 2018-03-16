@@ -138,7 +138,7 @@ function bandLabel () {
 		place() + ' ' + memberNounPrefix() + ' ' + memberNouns(),
 		place() + ' ' + memberNouns(),
 		memberNounPrefix() + ' ' + bandNumeric(),
-		instrument() + ' ' + bandNumeric(),
+		instrument() + bandNumeric(),
 		bandNumeric(),
 		orchestra(),
 		orchestra(),
@@ -157,7 +157,7 @@ function place () {
 
 function instrument () {
 	return randomItem(
-		...itemChance('Jug', 'Marimba', 'Saxophone', 'Tympany', 20)
+		...itemChance('Jug ', 'Marimba ', 'Saxophone ', 'Tympany ', 20)
 	);
 }
 
