@@ -1,5 +1,8 @@
 module.exports.bandName = bandName;
 
+const BEFORE = 1;
+const AFTER = 2;
+
 // To do: take chance as parameter and merge in itemChance
 function randomItem () {
 	let items = [...arguments];
@@ -10,6 +13,16 @@ function randomItem () {
 function itemChance () {
 	let chanceItems = [...arguments];
 	let unsuccessful = chanceItems.pop() - 1;
+	let spaceMode = chanceItems.pop();
+
+	for (let i = 0; i < chanceItems.length; i++) {
+		if (spaceMode == BEFORE) {
+			chanceItems[i] = ' ' + chanceItems[i];
+		} else {
+			chanceItems[i] += ' ';
+		}
+	};
+
 	chanceItems.push(...emptyItems(unsuccessful));
 	return chanceItems;
 }
@@ -77,7 +90,7 @@ function femaleLeaderName () {
 }
 
 function adjective () {
-	return randomItem(...itemChance('Jolly ', 'Smilin\' ', 'General ', 20));
+	return randomItem(...itemChance('Jolly', 'Smilin\'', 'General', AFTER, 20));
 }
 
 function maleFirstName () {
@@ -127,7 +140,7 @@ function lastName () {
 
 function honorific () {
 	return randomItem(
-		...itemChance(' "King of the Polkas"', ' "The Crooning Troubador"', 30)
+		...itemChance('"King of the Polkas"', '"The Crooning Troubador"', BEFORE, 30)
 	);
 }
 
@@ -157,7 +170,7 @@ function place () {
 
 function instrument () {
 	return randomItem(
-		...itemChance('Jug ', 'Marimba ', 'Saxophone ', 'Tympany ', 20)
+		...itemChance('Jug', 'Marimba', 'Saxophone', 'Tympany', AFTER, 20)
 	);
 }
 
@@ -206,13 +219,13 @@ function orchestraSpecialty () {
 }
 
 function orchestraSpecialtyPrefix () {
-	return randomItem(...itemChance('International ', 'Specialty ', 5));
+	return randomItem(...itemChance('International', 'Specialty', AFTER, 5));
 }
 
 function orchestraSpecialtyMain () {
-	return randomItem(...itemChance('Dance ', 'Concert ', 'Folk ', 5));
+	return randomItem(...itemChance('Dance', 'Concert', 'Folk', AFTER, 5));
 }
 
 function orchestraSuffix () {
-	return randomItem(...itemChance(' De Luxe', 10));
+	return randomItem(...itemChance('De Luxe', BEFORE, 10));
 }
