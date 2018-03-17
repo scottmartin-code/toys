@@ -162,7 +162,7 @@ function bandLabel () {
 function place () {
 	return randomItem(
 		'Casa Loma', 'Campus', 'City', 'Farm', 'Grand Canyon', 'Hollywood',
-		'Lousiana', 'Motor City', 'New Orleans', 'Prairie', 'Red River',
+		'Louisiana', 'Motor City', 'New Orleans', 'Prairie', 'Red River',
 		'Santa Fe', 'Smoky Mountain', 'Texas', 'Valley'
 	);
 }
