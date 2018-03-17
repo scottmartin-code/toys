@@ -14,7 +14,7 @@
 #result {
 	width: 420px;
 	margin: 0 40px;
-	padding-top: 320px;
+	padding-top: 310px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 1.33em;
@@ -22,10 +22,7 @@
 	white-space: pre-wrap;
 }
 
-#generate-button {
-	margin: 1em auto;
+#advice {
+	margin-top: -0.5em;
 	font-size: 1.25em;
-	border-radius: 0.25em;
-	background: #eee;
-	padding: 0.25em;
 }

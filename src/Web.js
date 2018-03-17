@@ -20,10 +20,10 @@ class Web extends React.Component {
 		return (
 			<div>
 				<h1>Vintage Band Name Generator</h1>
-				<div id="label">
+				<div id="advice">Click label for another</div>
+				<div id="label" onClick={this.handleClick}>
 					<div id="result">{this.state.bandName}</div>
 				</div>
-				<button id="generate-button" onClick={this.handleClick}>Play me another!</button>
 			</div>
 		);
 	}
