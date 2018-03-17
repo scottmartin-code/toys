@@ -201,10 +201,6 @@ function orchestra () {
 	) + 'Orchestra' + orchestraSuffix();
 }
 
-function orchestraPlace () {
-	return randomItem(...itemChance(place(), 5));
-}
-
 function orchestraSpecialty () {
 	return orchestraSpecialtyPrefix() + orchestraSpecialtyMain();
 }
