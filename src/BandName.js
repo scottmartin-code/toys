@@ -3,7 +3,6 @@ module.exports.bandName = bandName;
 const BEFORE = 1;
 const AFTER = 2;
 
-// To do: take chance as parameter and merge in itemChance
 function randomItem () {
 	let items = [...arguments];
 
