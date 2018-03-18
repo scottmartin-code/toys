@@ -1,5 +1,5 @@
 import React from 'react';
-const bandName = require('./BandName.js').bandName;
+const bandName = require('./BandName.js');
 
 class Web extends React.Component {
 	constructor(props) {

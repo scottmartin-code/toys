@@ -1,7 +1,7 @@
 'use strict';
 
 const Twit     = require('twit');
-const bandName = require('../src/BandName.js').bandName;
+const bandName = require('../src/BandName.js');
 
 let twitter;
 
