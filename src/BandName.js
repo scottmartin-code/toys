@@ -3,6 +3,16 @@ module.exports.bandName = bandName;
 const BEFORE = 1;
 const AFTER = 2;
 
+function bandName () {
+	return randomItem(
+		leaderOrLeadersPossessive() + bandLabel(),
+		leaderOrLeadersPossessive() + bandLabel(),
+		leaderOrLeadersPossessive() + bandLabel(),
+		maleLeaderName() + ' and the ' + memberNouns(),
+		femaleLeaderName() + ' and the ' + memberNouns()
+	);
+}
+
 function randomItem () {
 	let items = [...arguments];
 
@@ -32,16 +42,6 @@ function emptyItems (number) {
 		items.push('');
 	}
 	return items;
-}
-
-function bandName () {
-	return randomItem(
-		leaderOrLeadersPossessive() + bandLabel(),
-		leaderOrLeadersPossessive() + bandLabel(),
-		leaderOrLeadersPossessive() + bandLabel(),
-		maleLeaderName() + ' and the ' + memberNouns(),
-		femaleLeaderName() + ' and the ' + memberNouns()
-	);
 }
 
 function leaderOrLeadersPossessive () {
