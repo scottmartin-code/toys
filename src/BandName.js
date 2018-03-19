@@ -1,10 +1,8 @@
 const recipes = require('./RecipeData.js');
 
-module.exports = () => {
-	return runRecipe('bandName');
-}
+module.exports = () => { return makeRecipe('bandName') }
 
-function randomItem (items) {
+function random (items) {
 	return items[Math.floor(Math.random() * items.length)];
 }
 
@@ -17,7 +15,7 @@ function itemChance (inputItems, chance, space) {
 	return chanceItems;
 }
 
-function runRecipe (recipeName) {
+function makeRecipe (recipeName) {
 	const recipe = recipes[recipeName];
 
 	let outputs = recipe.items.map( item => {
@@ -25,7 +23,7 @@ function runRecipe (recipeName) {
 
 		if (typeof item == 'object') {
 			item.forEach( recipe => {
-				result += recipes[recipe] ? runRecipe(recipe) : recipe;
+				result += recipes[recipe] ? makeRecipe(recipe) : recipe;
 			});
 		} else {
 			result = item;
@@ -35,6 +33,6 @@ function runRecipe (recipeName) {
 	});
 
 	return recipe.chance
-		? randomItem(itemChance(outputs, recipe.chance, recipe.space))
-		: randomItem(outputs);
+		? random(itemChance(outputs, recipe.chance, recipe.space))
+		: random(outputs);
 }
