@@ -9,9 +9,9 @@ function randomItem (items) {
 	return items[Math.floor(Math.random() * items.length)];
 }
 
-function itemChance (inputItems, chance, spaceMode) {
+function itemChance (inputItems, chance, space) {
 	let chanceItems = inputItems.map(item => {
-		return spaceMode == 'before' ? ` ${item}` : `${item} `;
+		return space == 'before' ? ` ${item}` : `${item} `;
 	});
 
 	chanceItems.push(...Array.from({length: chance}, (v, i) => ''));
@@ -27,13 +27,9 @@ function runRecipe (recipeName) {
 	items.forEach( item => {
 		let recipeResult = '';
 
-		if (typeof item == 'object') { // recipes
+		if (typeof item == 'object') {
 			item.forEach( recipe => {
-				let result = recipe.match(/_/)
-					? recipe.replace(/_/, '') // literal
-					: runRecipe(recipe);
-
-				recipeResult += result;
+				recipeResult += recipes[recipe] ? runRecipe(recipe) : recipe;
 			});
 		} else {
 			recipeResult = item;
@@ -43,7 +39,7 @@ function runRecipe (recipeName) {
 	});
 
 	if (recipe.chance) {
-		return randomItem(itemChance(outputs, recipe.chance, recipe.spaceMode));
+		return randomItem(itemChance(outputs, recipe.chance, recipe.space));
 	} else {
 		return randomItem(outputs);
 	}

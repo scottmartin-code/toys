@@ -6,31 +6,31 @@ const recipes = {
 		items: [
 			[ 'leaderAndHis' ],
 			[ 'leaderAndHer' ],
-			[ 'leaders', '_ and their ' ],
-			[ 'leaderName', '_ and the ' ]
+			[ 'leaders', ' and their ' ],
+			[ 'leaderName', ' and the ' ]
 		]
 	},
 	leaderAndHer: {
 		items: [
-			[ 'femaleLeaderName', '_ and her ' ],
-			[ 'femaleLeaderName', "_'s " ]
+			[ 'femaleLeaderName', ' and her ' ],
+			[ 'femaleLeaderName', "'s " ]
 		]
 	},
 	leaderAndHis: {
 		items: [
-			[ 'maleLeaderName', '_ and his ' ],
-			[ 'maleLeaderName', "_'s "]
+			[ 'maleLeaderName', ' and his ' ],
+			[ 'maleLeaderName', "'s "]
 		]
 	},
 	leaders: {
 		items: [
-			[ 'maleLeaderName', '_ and ', 'maleLeaderName' ],
-			[ 'maleFirstName', '_ and ', 'maleLeaderName' ],
-			[ 'femaleFirstName', '_ and ', 'femaleLeaderName' ],
-			[ 'lastName', '_ and ', 'lastName' ],
-			[ '_The ', 'lastName', '_ Brothers' ],
-			[ '_The ', 'lastName', '_ Sisters' ],
-			[ "_The King's Jesters" ]
+			[ 'maleLeaderName', ' and ', 'maleLeaderName' ],
+			[ 'maleFirstName', ' and ', 'maleLeaderName' ],
+			[ 'femaleFirstName', ' and ', 'femaleLeaderName' ],
+			[ 'lastName', ' and ', 'lastName' ],
+			[ 'The ', 'lastName', ' Brothers' ],
+			[ 'The ', 'lastName', ' Sisters' ],
+			[ "The King's Jesters" ]
 		]
 	},
 	leaderName: {
@@ -38,16 +38,16 @@ const recipes = {
 	},
 	maleLeaderName: {
 		items: [
-			[ 'adjective', 'maleFirstName', '_ ', 'lastName', 'honorific' ],
-			[ 'maleFirstName', '_ ', 'middleInitialOrNickname', 'lastName', 'honorific' ]
+			[ 'adjective', 'maleFirstName', ' ', 'lastName', 'honorific' ],
+			[ 'maleFirstName', ' ', 'middleInitialOrNickname', 'lastName', 'honorific' ]
 		]
 	},
 	femaleLeaderName: {
-		items: [ [ 'femaleFirstName', '_ ', 'lastName' ] ]
+		items: [ [ 'femaleFirstName', ' ', 'lastName' ] ]
 	},
 	adjective: {
 		items: [ 'Jolly', "Smilin'", 'General' ],
-		spaceMode: 'after',
+		space: 'after',
 		chance: 20
 	},
 	maleFirstName: {
@@ -76,7 +76,7 @@ const recipes = {
 			'L.', 'M.', 'N.', 'O.', 'P.', 'Q.', 'R.', 'S.', 'T.', 'U.', 'V.',
 			'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"'
 		],
-		spaceMode: 'after',
+		space: 'after',
 		chance: 27
 	},
 	lastName: {
@@ -95,17 +95,17 @@ const recipes = {
 	},
 	honorific: {
 		items: [ '"King of the Polkas"', '"The Crooning Troubador"' ],
-		spaceMode: 'before',
+		space: 'before',
 		chance: 30
 	},
 	bandLabel: {
 		items: [
 			[ 'memberNouns' ],
-			[ 'memberNounPrefix', '_ ', 'memberNouns' ],
-			[ 'place', '_ ', 'memberNounPrefix', '_ ', 'memberNouns' ],
-			[ 'place', '_ ', 'memberNouns' ],
-			[ 'memberNounNumericPrefix', '_ ', 'memberNouns' ],
-			[ 'memberNounPrefix', '_ ', 'bandNumeric' ],
+			[ 'memberNounPrefix', ' ', 'memberNouns' ],
+			[ 'place', ' ', 'memberNounPrefix', ' ', 'memberNouns' ],
+			[ 'place', ' ', 'memberNouns' ],
+			[ 'memberNounNumericPrefix', ' ', 'memberNouns' ],
+			[ 'memberNounPrefix', ' ', 'bandNumeric' ],
 			[ 'instrument', 'bandNumeric' ],
 			[ 'bandNumeric' ],
 			[ 'orchestra' ],
@@ -123,7 +123,7 @@ const recipes = {
 	},
 	instrument: {
 		items: [ 'Jug', 'Marimba', 'Saxophone', 'Tympany' ],
-		spaceMode: 'after',
+		space: 'after',
 		chance: 20
 	},
 	bandNumeric: {
@@ -163,9 +163,9 @@ const recipes = {
 	},
 	orchestra: {
 		items: [
-			[ 'place', '_ ', 'orchestraSpecialty', '_Orchestra', 'orchestraSuffix' ],
-			[ 'place', '_ ', '_Orchestra', 'orchestraSuffix' ],
-			[ 'orchestraSpecialty', '_Orchestra', 'orchestraSuffix' ]
+			[ 'place', ' ', 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ],
+			[ 'place', ' ', 'Orchestra', 'orchestraSuffix' ],
+			[ 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ]
 		]
 	},
 	orchestraSpecialty: {
@@ -175,17 +175,17 @@ const recipes = {
 	},
 	orchestraSpecialtyPrefix: {
 		items: [ 'International', 'Specialty' ],
-		spaceMode: 'after',
+		space: 'after',
 		chance: 5
 	},
 	orchestraSpecialtyMain: {
 		items: [ 'Dance', 'Concert', 'Folk' ],
-		spaceMode: 'after',
+		space: 'after',
 		chance: 5
 	},
 	orchestraSuffix: {
 		items: [ 'De Luxe' ],
-		spaceMode: 'before',
+		space: 'before',
 		chance: 10
 	}
 };
