@@ -5,28 +5,16 @@ function bandName () {
 }
 module.exports = bandName;
 
-function emptyItems (number) {
-	let items = [];
-	for (let i = 1; i < number; i++) {
-		items.push('');
-	}
-	return items;
-}
-
 function randomItem (items) {
 	return items[Math.floor(Math.random() * items.length)];
 }
 
-function itemChance (chanceItems, chance, spaceMode) {
-	for (let i = 0; i < chanceItems.length; i++) {
-		if (spaceMode == 'before') {
-			chanceItems[i] = ' ' + chanceItems[i];
-		} else {
-			chanceItems[i] += ' ';
-		}
-	};
+function itemChance (inputItems, chance, spaceMode) {
+	let chanceItems = inputItems.map(item => {
+		return spaceMode == 'before' ? ` ${item}` : `${item} `;
+	});
 
-	chanceItems.push(...emptyItems(chance));
+	chanceItems.push(...Array.from({length: chance}, (v, i) => ''));
 	return chanceItems;
 }
 
