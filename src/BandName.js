@@ -6,19 +6,19 @@ function random (items) {
 	return items[Math.floor(Math.random() * items.length)];
 }
 
-function itemChance (inputItems, chance, space) {
-	let chanceItems = inputItems.map(item => {
+function itemChance (items, chance, space) {
+	let outputs = items.map(item => {
 		return space == 'before' ? ` ${item}` : `${item} `;
 	});
 
-	chanceItems.push(...Array.from({length: chance}, (v, i) => ''));
-	return chanceItems;
+	outputs.push(...Array.from({length: chance}, (v, i) => ''));
+	return outputs;
 }
 
-function makeRecipe (recipeName) {
-	const recipe = recipes[recipeName];
+function makeRecipe (name) {
+	const recipe = recipes[name];
 
-	let outputs = recipe.items.map( item => {
+	let possibleOutputs = recipe.items.map( item => {
 		if (typeof item == 'object') {
 			return item.reduce( (acc, r) => {
 				return acc + recipes[r] ? makeRecipe(r)	: r;
@@ -29,6 +29,6 @@ function makeRecipe (recipeName) {
 	});
 
 	return recipe.chance
-		? random(itemChance(outputs, recipe.chance, recipe.space))
-		: random(outputs);
+		? random(itemChance(possibleOutputs, recipe.chance, recipe.space))
+		: random(possibleOutputs);
 }
