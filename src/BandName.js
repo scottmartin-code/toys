@@ -19,17 +19,13 @@ function makeRecipe (recipeName) {
 	const recipe = recipes[recipeName];
 
 	let outputs = recipe.items.map( item => {
-		let result = '';
-
 		if (typeof item == 'object') {
-			item.forEach( recipe => {
-				result += recipes[recipe] ? makeRecipe(recipe) : recipe;
-			});
+			return item.reduce( (acc, r) => {
+				return acc + recipes[r] ? makeRecipe(r)	: r;
+			}, '');
 		} else {
-			result = item;
+			return item;
 		}
-
-		return result;
 	});
 
 	return recipe.chance
