@@ -1,9 +1,8 @@
 const recipes = require('./RecipeData.js');
 
-function bandName () {
+module.exports = () => {
 	return runRecipe('bandName');
 }
-module.exports = bandName;
 
 function randomItem (items) {
 	return items[Math.floor(Math.random() * items.length)];
