@@ -20,11 +20,10 @@ function itemChance (inputItems, chance, space) {
 
 function runRecipe (recipeName) {
 	const recipe = recipes[recipeName];
-	const items = recipe.items;
 
 	let outputs = [];
 
-	items.forEach( item => {
+	recipe.items.forEach( item => {
 		let recipeResult = '';
 
 		if (typeof item == 'object') {
@@ -38,9 +37,7 @@ function runRecipe (recipeName) {
 		outputs.push(recipeResult);
 	});
 
-	if (recipe.chance) {
-		return randomItem(itemChance(outputs, recipe.chance, recipe.space));
-	} else {
-		return randomItem(outputs);
-	}
+	return recipe.chance
+		? randomItem(itemChance(outputs, recipe.chance, recipe.space))
+		: randomItem(outputs);
 }
