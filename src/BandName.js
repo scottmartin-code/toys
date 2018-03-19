@@ -11,8 +11,7 @@ function itemChance (items, chance, space) {
 		return space == 'before' ? ` ${item}` : `${item} `;
 	});
 
-	outputs.push(...Array.from({length: chance}, (v, i) => ''));
-	return outputs;
+	return [...outputs, ...Array.from({length: chance}, (v, i) => '')];
 }
 
 function makeRecipe (name) {
