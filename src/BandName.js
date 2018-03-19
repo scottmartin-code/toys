@@ -21,20 +21,18 @@ function itemChance (inputItems, chance, space) {
 function runRecipe (recipeName) {
 	const recipe = recipes[recipeName];
 
-	let outputs = [];
-
-	recipe.items.forEach( item => {
-		let recipeResult = '';
+	let outputs = recipe.items.map( item => {
+		let result = '';
 
 		if (typeof item == 'object') {
 			item.forEach( recipe => {
-				recipeResult += recipes[recipe] ? runRecipe(recipe) : recipe;
+				result += recipes[recipe] ? runRecipe(recipe) : recipe;
 			});
 		} else {
-			recipeResult = item;
+			result = item;
 		}
 
-		outputs.push(recipeResult);
+		return result;
 	});
 
 	return recipe.chance
