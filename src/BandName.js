@@ -2,16 +2,20 @@ const recipes = require('./RecipeData.js');
 
 module.exports = () => { return makeRecipe('bandName') }
 
-function random (items) {
-	return items[Math.floor(Math.random() * items.length)];
-}
+function random (items, chance, space) {
+	let outputs;
 
-function itemChance (items, chance, space) {
-	let outputs = items.map(item => {
-		return space == 'before' ? ` ${item}` : `${item} `;
-	});
+	if (chance) {
+		let spaced = items.map(item => {
+			return space == 'before' ? ` ${item}` : `${item} `;
+		});
 
-	return [...outputs, ...Array.from({length: chance}, (v, i) => '')];
+		outputs = [...spaced, ...Array.from({length: chance}, (v, i) => '')];
+	} else {
+		outputs = [...items];
+	}
+
+	return outputs[Math.floor(Math.random() * outputs.length)];
 }
 
 function makeRecipe (name) {
@@ -27,7 +31,5 @@ function makeRecipe (name) {
 		}
 	});
 
-	return recipe.chance
-		? random(itemChance(possibleOutputs, recipe.chance, recipe.space))
-		: random(possibleOutputs);
+	return random(possibleOutputs, recipe.chance, recipe.space);
 }
