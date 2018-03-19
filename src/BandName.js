@@ -21,7 +21,7 @@ function makeRecipe (name) {
 	let possibleOutputs = recipe.items.map( item => {
 		if (typeof item == 'object') {
 			return item.reduce( (acc, r) => {
-				return acc + recipes[r] ? makeRecipe(r)	: r;
+				return recipes[r] ? acc + makeRecipe(r) : acc + r;
 			}, '');
 		} else {
 			return item;
