@@ -39,7 +39,10 @@ const recipes = {
 	maleLeaderName: {
 		items: [
 			[ 'adjective', 'maleFirstName', ' ', 'lastName', 'honorific' ],
-			[ 'maleFirstName', ' ', 'middleInitialOrNickname', 'lastName', 'honorific' ],
+			[
+				'maleFirstName', ' ', 'middleInitialOrNickname', 'lastName',
+				'honorific',
+			],
 		],
 	},
 	femaleLeaderName: {
@@ -57,9 +60,10 @@ const recipes = {
 			'Frank', 'Fred', 'Gene', 'George', 'Glen', 'Hank', 'Hector',
 			'Henry', 'Howard', 'Jack', 'James', 'John', 'Johnnie', 'Johnny',
 			'Karl', 'Louis', 'Lowell', 'Mitchell', 'Ollie', 'Oscar',
-			'Pee Wee', 'Ray', 'Robin', 'Roger', 'Rusty', 'Sammy', 'Scotty',
-			'Seymour', 'Sonny', 'Stuff', 'Tab', 'Ted', 'Thomas', 'Vaughn',
-			'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie', 'Wilson',
+			'Pee Wee', 'Ray', 'Red', 'Robin', 'Roger', 'Rusty', 'Sammy',
+			'Scotty', 'Seymour', 'Sonny', 'Stuff', 'Tab', 'Ted', 'Thomas',
+			'Vaughn', 'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie',
+			'Wilson',
 		],
 	},
 	femaleFirstName: {
@@ -116,9 +120,11 @@ const recipes = {
 	},
 	place: {
 		items: [
-			'Casa Loma', 'Campus', 'City', 'Colorado', 'Farm', 'Grand Canyon',
-			'Hollywood', 'Louisiana', 'Motor City', 'New Orleans', 'Prairie',
-			'Red River', 'Santa Fe', 'Smoky Mountain', 'Texas', 'Valley',
+			'Beaver Valley', 'Casa Loma', 'Campus', 'City', 'Colorado',
+			'Farm', 'Grand Canyon', 'Hollywood', 'Louisiana', 'Michigan',
+			'Motor City', 'Mound City', 'New Orleans', 'Pecos River',
+			'Prairie', 'Red River', 'Santa Fe', 'Smoky Mountain', 'Texas',
+			'Valley',
 		],
 	},
 	instrument: {
@@ -135,12 +141,12 @@ const recipes = {
 	memberNounPrefix: {
 		items: [
 			'All Star', 'Barn Dance', 'Bashful', 'Black and White',
-			'Blue Grass', 'Boogie Woogie', 'Buster Brown', 'Cabin', 'Cactus',
-			'Cool', 'Cowboy', 'Dependable', 'Dixie Lily', 'Famous', 'Fox',
-			'Happiness', 'Hot', 'Hot Box', 'House', 'Jazz', 'Jolly',
-			'Marimba', 'Master', 'Melody', 'Moana', 'Musical', 'Polka',
-			'Radio', 'Rambling', 'Rhythm', 'Round Up', 'Royal', 'Statler',
-			'Tivoli', 'Varsity',
+			'Blue Grass', 'Boogie Woogie', 'Boulevard', 'Buster Brown',
+			'Cabin', 'Cactus', 'Cool', 'Cowboy', 'Dependable', 'Dixie Lily',
+			'Famous', 'Fox', 'Happiness', 'Hot', 'Hot Box', 'House', 'Jazz',
+			'Jolly', 'Jungle', 'Master', 'Melody', 'Moana', 'Musical',
+			'Novelty', 'Peerless', 'Polka', 'Radio', 'Rambling', 'Rhythm',
+			'Round Up', 'Royal', 'Statler', 'Tivoli', 'Varsity',
 		],
 	},
 	memberNounNumericPrefix: {
@@ -148,22 +154,26 @@ const recipes = {
 	},
 	memberNouns: {
 		items: [
-			'Band', 'Blazers', 'Bob Cats', 'Bohemians', 'Bombadiers', 'Boys',
-			'Briarhoppers', 'Canadians', 'Caroleers', 'Cats', 'Chicagoans',
-			'Cornellians', 'Cowboys', 'Debs', 'Dude Ranchers', 'Feetwarmers',
-			'Gang', 'Girls', 'Girls of the Golden West', 'Hawaiians',
-			'Highpointers', 'Hillbillies', 'Hounds', 'Hunters', 'Islanders',
-			'Stompers', 'Knights', 'Melody Makers', 'Millers',
-			'Pennsylvanians', 'Plainsmen', 'Ramblers', 'Rangers', 'Rascals',
-			'Rhythmasters', 'Riders', 'Rockers', 'Rounders', 'Slickers',
-			'Sons of the Golden West', 'Syncopaters', 'Swing Wing',
-			'Tornadoes', 'Troopers', 'Twisters', 'Vagabonds', 'Westerners',
-			'Wranglers', 'Yanks',
+			'Band', 'Blazers', 'Blue-Blowers', 'Bob Cats', 'Bohemians',
+			'Bombadiers', 'Boys', 'Briarhoppers', 'Canadians', 'Caroleers',
+			'Cats', 'Chicagoans', 'Cornellians', 'Cowboys', 'Debs',
+			'Dude Ranchers', 'Feetwarmers', 'Gang', 'Girls',
+			'Girls of the Golden West', 'Hawaiians', 'Highpointers',
+			'Hillbillies', 'Hounds', 'Hunters', 'Islanders', 'Stompers',
+			'Knights', 'Melody Makers', 'Millers', 'Pennsylvanians',
+			'Plainsmen', 'Ramblers', 'Rangers', 'Rascals', 'Rhythmasters',
+			'Rhythmists', 'Riders', 'Rockers', 'Rogues', 'Rounders',
+			'Slickers', 'Sons of the Golden West', 'Sweethearts', 'Swing Wing',
+			'Syncopaters', 'Tornadoes', 'Troopers', 'Twisters', 'Vagabonds',
+			'Westerners', 'Wranglers', 'Yanks',
 		],
 	},
 	orchestra: {
 		items: [
-			[ 'place', ' ', 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ],
+			[
+				'place', ' ', 'orchestraSpecialty', 'Orchestra',
+				'orchestraSuffix',
+			],
 			[ 'place', ' ', 'Orchestra', 'orchestraSuffix' ],
 			[ 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ],
 		],
