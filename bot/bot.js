@@ -13,7 +13,7 @@ try {
 		access_token_secret: process.env.access_token_secret
 	});
 } catch(err) {
-	throw new Error('Twitter API credentials not loaded, is .envrc present?');
+	throw new Error('Problem initializing Twit:', error.message);
 }
 
 // Post on startup
@@ -24,11 +24,9 @@ setInterval(tweet, 60*60*1000);
 function tweet () {
 	twitter.post('statuses/update', { status: bandName() }, tweeted);
 
-	function tweeted(err, data, response) {
-		if (err) {
-			console.log(err);
-		} else {
-			console.log('Tweeted: ' + data.text);
-		}
+	function tweeted(error, data, response) {
+		if (error) throw new Error('Problem trying to tweet:', error.message);
+
+		console.log('Tweeted: ' + data.text);
 	}
 }
