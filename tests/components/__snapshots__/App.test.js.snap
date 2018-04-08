@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches the snapshot 1`] = `
+<div>
+  <h1>
+    Vintage Band Name Generator
+  </h1>
+  <div
+    className="advice"
+  >
+    Click label for another
+  </div>
+  <div
+    className="label"
+    onClick={undefined}
+  >
+    <div
+      className="result"
+    />
+  </div>
+</div>
+`;

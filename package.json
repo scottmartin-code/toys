@@ -4,7 +4,7 @@
   "description": "Generate band names that could appear on the label of a gramophone record",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "test": "jest",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
@@ -31,9 +31,13 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
+    "react-test-renderer": "^16.3.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.9"
   },
