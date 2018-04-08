@@ -1,7 +1,5 @@
 const recipes = require('./RecipeData.js');
 
-module.exports = () => { return makeRecipe('bandName'); };
-
 function makeRecipe (name) {
 	const recipe = recipes[name];
 
@@ -29,3 +27,8 @@ function makeRecipe (name) {
 
 	return out[Math.floor(Math.random() * out.length)];
 }
+
+module.exports = {
+	bandName: () => { return makeRecipe('bandName'); },
+	makeRecipe,
+};

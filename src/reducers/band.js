@@ -1,6 +1,6 @@
 import { RECEIVE_BAND } from '../constants';
 
-const bandName = require('../BandName');
+const { bandName } = require('../BandName');
 
 const band = (state = bandName(), action) => {
 	switch (action.type) {

@@ -2,7 +2,7 @@ import {
 	RECEIVE_BAND,
 } from '../constants/';
 
-const bandName = require('../BandName');
+const { bandName } = require('../BandName');
 
 export const receiveBand = band => {
 	return {
