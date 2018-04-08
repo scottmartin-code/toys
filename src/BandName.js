@@ -1,6 +1,6 @@
 const recipes = require('./RecipeData.js');
 
-module.exports = () => { return makeRecipe('bandName') }
+module.exports = () => { return makeRecipe('bandName'); };
 
 function makeRecipe (name) {
 	const recipe = recipes[name];
@@ -22,9 +22,9 @@ function makeRecipe (name) {
 			return recipe.space == 'before' ? ` ${item}` : `${item} `;
 		});
 
-		out = [...spaced, ...Array.from({length: recipe.chance}, (v, i) => '')];
+		out = [ ...spaced, ...Array.from({ length: recipe.chance }, (v, i) => '') ];
 	} else {
-		out = [...recipeItems];
+		out = [ ...recipeItems ];
 	}
 
 	return out[Math.floor(Math.random() * out.length)];

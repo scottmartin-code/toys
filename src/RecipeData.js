@@ -1,26 +1,26 @@
 const recipes = {
 	bandName: {
-		items: [ [ 'leaderOrLeadersPossessive', 'bandLabel' ] ]
+		items: [ [ 'leaderOrLeadersPossessive', 'bandLabel' ] ],
 	},
 	leaderOrLeadersPossessive: {
 		items: [
 			[ 'leaderAndHis' ],
 			[ 'leaderAndHer' ],
 			[ 'leaders', ' and their ' ],
-			[ 'leaderName', ' and the ' ]
-		]
+			[ 'leaderName', ' and the ' ],
+		],
 	},
 	leaderAndHer: {
 		items: [
 			[ 'femaleLeaderName', ' and her ' ],
-			[ 'femaleLeaderName', "'s " ]
-		]
+			[ 'femaleLeaderName', '\'s ' ],
+		],
 	},
 	leaderAndHis: {
 		items: [
 			[ 'maleLeaderName', ' and his ' ],
-			[ 'maleLeaderName', "'s "]
-		]
+			[ 'maleLeaderName', '\'s ' ],
+		],
 	},
 	leaders: {
 		items: [
@@ -30,54 +30,54 @@ const recipes = {
 			[ 'lastName', ' and ', 'lastName' ],
 			[ 'The ', 'lastName', ' Brothers' ],
 			[ 'The ', 'lastName', ' Sisters' ],
-			[ "The King's Jesters" ]
-		]
+			[ 'The King\'s Jesters' ],
+		],
 	},
 	leaderName: {
-		items: [ [ 'maleLeaderName' ], [ 'femaleLeaderName' ] ]
+		items: [ [ 'maleLeaderName' ], [ 'femaleLeaderName' ] ],
 	},
 	maleLeaderName: {
 		items: [
 			[ 'adjective', 'maleFirstName', ' ', 'lastName', 'honorific' ],
-			[ 'maleFirstName', ' ', 'middleInitialOrNickname', 'lastName', 'honorific' ]
-		]
+			[ 'maleFirstName', ' ', 'middleInitialOrNickname', 'lastName', 'honorific' ],
+		],
 	},
 	femaleLeaderName: {
-		items: [ [ 'femaleFirstName', ' ', 'lastName' ] ]
+		items: [ [ 'femaleFirstName', ' ', 'lastName' ] ],
 	},
 	adjective: {
-		items: [ 'Jolly', "Smilin'", 'General' ],
+		items: [ 'Jolly', 'Smilin\'', 'General' ],
 		space: 'after',
-		chance: 20
+		chance: 20,
 	},
 	maleFirstName: {
 		items: [
 			'Abbey', 'Albert', 'Arthur', 'Bill', 'Bob', 'Bobby', 'Buddy',
 			'Carter', 'Clyde', 'Donnie', 'Eddie', 'Edward', 'Edwin', 'Earl',
 			'Frank', 'Fred', 'Gene', 'George', 'Glen', 'Hank', 'Hector',
-			'Henry', 'Howard', 'Jack','James', 'John', 'Johnnie', 'Johnny',
+			'Henry', 'Howard', 'Jack', 'James', 'John', 'Johnnie', 'Johnny',
 			'Karl', 'Louis', 'Lowell', 'Mitchell', 'Ollie', 'Oscar',
 			'Pee Wee', 'Ray', 'Robin', 'Roger', 'Rusty', 'Sammy', 'Scotty',
 			'Seymour', 'Sonny', 'Stuff', 'Tab', 'Ted', 'Thomas', 'Vaughn',
-			'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie', 'Wilson'
-		]
+			'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie', 'Wilson',
+		],
 	},
 	femaleFirstName: {
 		items: [
 			'Anita', 'Bessie', 'Carrie', 'Connie', 'Ellen', 'Ginny', 'Gloria',
 			'Helen', 'June', 'Kitty', 'Louise', 'Margaret', 'Marie', 'Marion',
 			'Martha', 'Mary', 'Maxine', 'Nellie', 'Olive', 'Rosetta', 'Ruby',
-			'Shannon', 'Virginia', 'Vivian'
-		]
+			'Shannon', 'Virginia', 'Vivian',
+		],
 	},
 	middleInitialOrNickname: {
 		items: [
 			'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.', 'K.',
 			'L.', 'M.', 'N.', 'O.', 'P.', 'Q.', 'R.', 'S.', 'T.', 'U.', 'V.',
-			'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"'
+			'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"',
 		],
 		space: 'after',
-		chance: 27
+		chance: 27,
 	},
 	lastName: {
 		items: [
@@ -90,13 +90,13 @@ const recipes = {
 			'McDonald', 'McGhee', 'McKinley', 'McPartland', 'Melton',
 			'Miller', 'Monroe', 'Mooney', 'Powers', 'Pryor', 'Russels',
 			'Schneider', 'Simms', 'Short', 'Smith', 'Snow', 'Sparrow',
-			'Swift', 'Tharpe', 'Williams', 'Worth'
-		]
+			'Swift', 'Tharpe', 'Williams', 'Worth',
+		],
 	},
 	honorific: {
 		items: [ '"King of the Polkas"', '"The Crooning Troubador"' ],
 		space: 'before',
-		chance: 30
+		chance: 30,
 	},
 	bandLabel: {
 		items: [
@@ -112,25 +112,25 @@ const recipes = {
 			[ 'orchestra' ],
 			[ 'orchestra' ],
 			[ 'orchestra' ],
-		]
+		],
 	},
 	place: {
 		items: [
 			'Casa Loma', 'Campus', 'City', 'Colorado', 'Farm', 'Grand Canyon',
 			'Hollywood', 'Louisiana', 'Motor City', 'New Orleans', 'Prairie',
-			'Red River', 'Santa Fe', 'Smoky Mountain', 'Texas', 'Valley'
-		]
+			'Red River', 'Santa Fe', 'Smoky Mountain', 'Texas', 'Valley',
+		],
 	},
 	instrument: {
 		items: [ 'Jug', 'Marimba', 'Saxophone', 'Tympany' ],
 		space: 'after',
-		chance: 20
+		chance: 20,
 	},
 	bandNumeric: {
 		items: [
 			'Band', 'Ensemble', 'Five', 'Trio', 'Quartet', 'Quartette',
-			'Quintet', 'Sax-O-Tette', 'Sextet', 'Symphonette'
-		]
+			'Quintet', 'Sax-O-Tette', 'Sextet', 'Symphonette',
+		],
 	},
 	memberNounPrefix: {
 		items: [
@@ -140,11 +140,11 @@ const recipes = {
 			'Happiness', 'Hot', 'Hot Box', 'House', 'Jazz', 'Jolly',
 			'Marimba', 'Master', 'Melody', 'Moana', 'Musical', 'Polka',
 			'Radio', 'Rambling', 'Rhythm', 'Round Up', 'Royal', 'Statler',
-			'Tivoli', 'Varsity'
-		]
+			'Tivoli', 'Varsity',
+		],
 	},
 	memberNounNumericPrefix: {
-		items: [ 'Three', 'Four', 'Five', 'Six', 'Seven' ]
+		items: [ 'Three', 'Four', 'Five', 'Six', 'Seven' ],
 	},
 	memberNouns: {
 		items: [
@@ -158,36 +158,36 @@ const recipes = {
 			'Rhythmasters', 'Riders', 'Rockers', 'Rounders', 'Slickers',
 			'Sons of the Golden West', 'Syncopaters', 'Swing Wing',
 			'Tornadoes', 'Troopers', 'Twisters', 'Vagabonds', 'Westerners',
-			'Wranglers', 'Yanks'
-		]
+			'Wranglers', 'Yanks',
+		],
 	},
 	orchestra: {
 		items: [
 			[ 'place', ' ', 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ],
 			[ 'place', ' ', 'Orchestra', 'orchestraSuffix' ],
-			[ 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ]
-		]
+			[ 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ],
+		],
 	},
 	orchestraSpecialty: {
 		items: [
-			[ 'orchestraSpecialtyPrefix', 'orchestraSpecialtyMain' ]
-		]
+			[ 'orchestraSpecialtyPrefix', 'orchestraSpecialtyMain' ],
+		],
 	},
 	orchestraSpecialtyPrefix: {
 		items: [ 'International', 'Specialty' ],
 		space: 'after',
-		chance: 5
+		chance: 5,
 	},
 	orchestraSpecialtyMain: {
 		items: [ 'Dance', 'Concert', 'Folk' ],
 		space: 'after',
-		chance: 5
+		chance: 5,
 	},
 	orchestraSuffix: {
 		items: [ 'De Luxe' ],
 		space: 'before',
-		chance: 10
-	}
+		chance: 10,
+	},
 };
 
 module.exports = recipes;

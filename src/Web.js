@@ -6,7 +6,7 @@ class Web extends React.Component {
 		super(props);
 
 		this.state = {
-			bandName: bandName()
+			bandName: bandName(),
 		};
 
 		this.handleClick = this.handleClick.bind(this);
