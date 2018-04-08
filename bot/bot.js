@@ -10,16 +10,16 @@ try {
 		consumer_key:        process.env.consumer_key,
 		consumer_secret:     process.env.consumer_secret,
 		access_token:        process.env.access_token,
-		access_token_secret: process.env.access_token_secret
+		access_token_secret: process.env.access_token_secret,
 	});
-} catch(err) {
+} catch (err) {
 	throw new Error('Problem initializing Twit:', error.message);
 }
 
 // Post on startup
 tweet();
 
-setInterval(tweet, 60*60*1000);
+setInterval(tweet, 60 * 60 * 1000);
 
 function tweet () {
 	twitter.post('statuses/update', { status: bandName() }, tweeted);
