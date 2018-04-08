@@ -1,5 +1,5 @@
 # Vintage Band Name Bot
 
-A Twitter bot that generates names of the kind of dance bands seen on 78RPM records. Tweets hourly at [@78_bands](https://twitter.com/78_bands). In the `web` directory there's a React app version that you can click on to your heart's content. The file `bnf.txt` contains a BNF grammar for the band name structure. I wrote it before starting the code, so the output is more complex now.
+A Twitter bot that generates names of the kind of dance bands seen on 78RPM records. Tweets hourly at [@78_bands](https://twitter.com/78_bands). In the `web` directory there's a React app version that you can click on to your heart's content. To build it, run `npm install` in the root directory, then `npm run build`.
 
-The header photo on Twitter is [Beryl Evetts and the Syd Roy Lyricals Dance Band at Mrs. McLurcan's Wentworth Hotel, February 1929, by Sam Hood](https://www.flickr.com/photos/statelibraryofnsw/5949033597/), and the avatar photo is part of [La Marr's Dance Band - Albury, NSW, 1926](https://www.flickr.com/photos/statelibraryofnsw/5949040371/), both from the collection of the [State Library of New South Wales](http://www.sl.nsw.gov.au/).
+The file `bnf.txt` contains a BNF grammar for the band name structure. I wrote it before starting the code, so the output is more complex now.
