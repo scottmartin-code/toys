@@ -1,25 +1,39 @@
 const recipes = {
 	bandName: {
-		items: [ [ 'leaderOrLeadersPossessive', 'bandLabel' ] ],
-	},
-	leaderOrLeadersPossessive: {
 		items: [
-			[ 'leaderAndHis' ],
-			[ 'leaderAndHer' ],
-			[ 'leaders', ' and their ' ],
-			[ 'leaderName', ' and the ' ],
+			[ 'leaderPossessiveOrThe', 'bandLabel' ],
+			// The following to appear infrequently
+			// [ 'memberNounNumericPrefix', ' ', 'lastName', ' ', 'siblings' ],
+			// [ 'alliterativeBand' ],
+			// [ 'femaleLeaderAndHer', 'instrument' ],
+			// [ 'maleLeaderAndHis', 'instrument' ],
 		],
 	},
-	leaderAndHer: {
+	leaderPossessiveOrThe: {
+		items: [
+			[ 'leaderSingularPossessive' ],
+			[ 'leaders', ' and their ' ],
+			[ 'The ' ],
+		],
+	},
+	leaderSingularPossessive: {
+		items: [
+			[ 'femaleLeaderAndHer' ],
+			[ 'maleLeaderAndHis' ],
+			[ 'lastName', '\'s ' ],
+			[ 'leaderName', '\'s ' ],
+			[ 'leaderName', ' and the ' ],
+			[ 'leaderName', ' with the ' ],
+		],
+	},
+	femaleLeaderAndHer: {
 		items: [
 			[ 'femaleLeaderName', ' and her ' ],
-			[ 'femaleLeaderName', '\'s ' ],
 		],
 	},
-	leaderAndHis: {
+	maleLeaderAndHis: {
 		items: [
 			[ 'maleLeaderName', ' and his ' ],
-			[ 'maleLeaderName', '\'s ' ],
 		],
 	},
 	leaders: {
@@ -56,10 +70,10 @@ const recipes = {
 	maleFirstName: {
 		items: [
 			'Abbey', 'Albert', 'Arthur', 'Bill', 'Bob', 'Bobby', 'Buddy',
-			'Carter', 'Clyde', 'Donnie', 'Eddie', 'Edward', 'Edwin', 'Earl',
-			'Frank', 'Fred', 'Gene', 'George', 'Glen', 'Hank', 'Hector',
-			'Henry', 'Howard', 'Jack', 'James', 'John', 'Johnnie', 'Johnny',
-			'Karl', 'Louis', 'Lowell', 'Mitchell', 'Ollie', 'Oscar',
+			'Bull Moose', 'Carter', 'Clyde', 'Donnie', 'Eddie', 'Edward',
+			'Edwin', 'Earl', 'Frank', 'Fred', 'Gene', 'George', 'Glen', 'Hank',
+			'Hector', 'Henry', 'Howard', 'Jack', 'James', 'John', 'Johnnie',
+			'Johnny', 'Karl', 'Louis', 'Lowell', 'Mitchell', 'Ollie', 'Oscar',
 			'Pee Wee', 'Ray', 'Red', 'Robin', 'Roger', 'Rusty', 'Sammy',
 			'Scotty', 'Seymour', 'Sonny', 'Stuff', 'Tab', 'Ted', 'Thomas',
 			'Vaughn', 'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie',
@@ -85,22 +99,131 @@ const recipes = {
 	},
 	lastName: {
 		items: [
-			'Adair', 'Adams', 'Allen', 'Ayres', 'Balmer', 'Baranco', 'Baur',
-			'Bechet', 'Brown', 'Bostic', 'Burke', 'Carlson', 'Cletro',
-			'Crayton', 'Crosby', 'Costa', 'Dixon', 'Fox', 'Fuller',
-			'Gershwin', 'Gray', 'Hall', 'Heier', 'Jackson', 'Jenkins',
-			'Johnson', 'Jordan', 'Kahn', 'Kaufman', 'Kaye', 'Kent', 'King',
-			'Kreisler', 'Kryger', 'Lane', 'Lewis', 'Maddox', 'McCoy',
-			'McDonald', 'McGhee', 'McKinley', 'McPartland', 'Melton',
-			'Miller', 'Monroe', 'Mooney', 'Powers', 'Pryor', 'Russels',
-			'Schneider', 'Simms', 'Short', 'Smith', 'Snow', 'Sparrow',
-			'Swift', 'Tharpe', 'Williams', 'Worth',
+			[ 'lastNameA' ],
+			[ 'lastNameB' ],
+			[ 'lastNameC' ],
+			[ 'lastNameD' ],
+			[ 'lastNameF' ],
+			[ 'lastNameG' ],
+			[ 'lastNameH' ],
+			[ 'lastNameJ' ],
+			[ 'lastNameL' ],
+			[ 'lastNameM' ],
+			[ 'lastNameP' ],
+			[ 'lastNameR' ],
+			[ 'lastNameS' ],
+			[ 'lastNameT' ],
+			[ 'lastNameW' ],
+		],
+	},
+	lastNameA: {
+		items: [
+			'Adair', 'Adams', 'Allen', 'Ayres',
+		],
+	},
+	lastNameB: {
+		items: [
+			'Balmer', 'Baranco', 'Baur', 'Bechet', 'Brown', 'Bostic', 'Burke',
+		],
+	},
+	lastNameC: {
+		items: [
+			'Carlson', 'Cletro', 'Crayton', 'Crosby', 'Costa',
+		],
+	},
+	lastNameD: {
+		items: [
+			'Dixon',
+		],
+	},
+	lastNameF: {
+		items: [
+			'Fox', 'Fuller',
+		],
+	},
+	lastNameG: {
+		items: [
+			'Gershwin', 'Gray',
+		],
+	},
+	lastNameH: {
+		items: [
+			'Hall', 'Heier',
+		],
+	},
+	lastNameJ: {
+		items: [
+			'Jackson', 'Jenkins', 'Johnson', 'Jordan',
+		],
+	},
+	lastNameK: {
+		items: [
+			'Kahn', 'Kaufman', 'Kaye', 'Kent', 'King', 'Kreisler', 'Kryger',
+		],
+	},
+	lastNameL: {
+		items: [
+			'Lane', 'Lewis',
+		],
+	},
+	lastNameM: {
+		items: [
+			'Maddox', 'McCoy', 'McDonald', 'McGee', 'McKinley', 'McPartland',
+			'Melton', 'Miller', 'Monroe', 'Mooney',
+		],
+	},
+	lastNameP: {
+		items: [
+			'Powers', 'Pryor',
+		],
+	},
+	lastNameR: {
+		items: [
+			'Russels',
+		],
+	},
+	lastNameS: {
+		items: [
+			'Schneider', 'Simms', 'Short', 'Smith', 'Snow', 'Sparrow', 'Swift',
+		],
+	},
+	lastNameT: {
+		items: [
+			'Tharpe',
+		],
+	},
+	lastNameW: {
+		items: [
+			'Williams', 'Worth',
 		],
 	},
 	honorific: {
-		items: [ '"King of the Polkas"', '"The Crooning Troubador"' ],
+		items: [ '"King of the Polkas"', '"The Crooning Troubador"',
+			'"The Singing Drummer"', '"The Singing Ranger"',
+			'"The Southern Gentleman"', '"The Whispering Cornetist"' ],
 		space: 'before',
 		chance: 30,
+	},
+	instrument: {
+		items: [
+			'Clarinet', 'Guitar', 'Jug', 'Trombone', 'Trumpet',
+		],
+	},
+	alliterativeBand: {
+		items: [
+			[ 'lastNameB', '\'s ', 'memberNounsB' ],
+			[ 'lastNameC', '\'s ', 'memberNounsC' ],
+			[ 'lastNameD', '\'s ', 'memberNounsD' ],
+			[ 'lastNameF', '\'s ', 'memberNounsF' ],
+			[ 'lastNameG', '\'s ', 'memberNounsG' ],
+			[ 'lastNameH', '\'s ', 'memberNounsH' ],
+			[ 'lastNameM', '\'s ', 'memberNounsM' ],
+			[ 'lastNameP', '\'s ', 'memberNounsP' ],
+			[ 'lastNameR', '\'s ', 'memberNounsR' ],
+			[ 'lastNameS', '\'s ', 'memberNounsS' ],
+			[ 'lastNameT', '\'s ', 'memberNounsT' ],
+			[ 'lastNameW', '\'s ', 'memberNounsW' ],
+		],
 	},
 	bandLabel: {
 		items: [
@@ -110,7 +233,7 @@ const recipes = {
 			[ 'place', ' ', 'memberNouns' ],
 			[ 'memberNounNumericPrefix', ' ', 'memberNouns' ],
 			[ 'memberNounPrefix', ' ', 'bandNumeric' ],
-			[ 'instrument', 'bandNumeric' ],
+			[ 'instrumentOptional', 'bandNumeric' ],
 			[ 'bandNumeric' ],
 			[ 'orchestra' ],
 			[ 'orchestra' ],
@@ -120,14 +243,14 @@ const recipes = {
 	},
 	place: {
 		items: [
-			'Beaver Valley', 'Casa Loma', 'Campus', 'City', 'Colorado',
-			'Farm', 'Grand Canyon', 'Hollywood', 'Louisiana', 'Michigan',
-			'Motor City', 'Mound City', 'New Orleans', 'Pecos River',
-			'Prairie', 'Red River', 'Santa Fe', 'Smoky Mountain', 'Texas',
-			'Valley',
+			'Beaver Valley', 'Buffalo', 'Casa Loma', 'Campus', 'City',
+			'Club Maurice', 'Colorado', 'Farm', 'Georgia', 'Grand Canyon',
+			'Hollywood', 'Kentucky', 'Louisiana', 'Michigan', 'Motor City',
+			'Mound City', 'New Orleans', 'Pecos River', 'Prairie', 'Red River',
+			'Santa Fe', 'Shadyside', 'Smoky Mountain', 'Texas', 'Valley',
 		],
 	},
-	instrument: {
+	instrumentOptional: {
 		items: [ 'Jug', 'Marimba', 'Saxophone', 'Tympany' ],
 		space: 'after',
 		chance: 20,
@@ -140,13 +263,13 @@ const recipes = {
 	},
 	memberNounPrefix: {
 		items: [
-			'All Star', 'Barn Dance', 'Bashful', 'Black and White',
+			'All Star', 'Barn Dance', 'Bashful', 'Bearcats', 'Black and White',
 			'Blue Grass', 'Boogie Woogie', 'Boulevard', 'Buster Brown',
 			'Cabin', 'Cactus', 'Cool', 'Cowboy', 'Dependable', 'Dixie Lily',
-			'Famous', 'Fox', 'Happiness', 'Hot', 'Hot Box', 'House', 'Jazz',
-			'Jolly', 'Jungle', 'Master', 'Melody', 'Moana', 'Musical',
-			'Novelty', 'Peerless', 'Polka', 'Radio', 'Rambling', 'Rhythm',
-			'Round Up', 'Royal', 'Statler', 'Tivoli', 'Varsity',
+			'Famous', 'Happiness', 'Hot', 'Hot Box', 'House', 'Jazz',
+			'Jolly', 'Jungle', 'Lucky', 'Master', 'Melody', 'Moana', 'Musical',
+			'Novelty', 'Peerless', 'Polka', 'Radio', 'Rainbow', 'Rambling',
+			'Rhythm', 'Round Up', 'Royal', 'Statler', 'Tivoli', 'Varsity',
 		],
 	},
 	memberNounNumericPrefix: {
@@ -154,19 +277,110 @@ const recipes = {
 	},
 	memberNouns: {
 		items: [
-			'Band', 'Blazers', 'Blue-Blowers', 'Bob Cats', 'Bohemians',
-			'Bombadiers', 'Boys', 'Briarhoppers', 'Canadians', 'Caroleers',
-			'Cats', 'Chicagoans', 'Cornellians', 'Cowboys', 'Debs',
-			'Dude Ranchers', 'Feetwarmers', 'Gang', 'Girls',
-			'Girls of the Golden West', 'Hawaiians', 'Highpointers',
-			'Hillbillies', 'Hounds', 'Hunters', 'Islanders', 'Stompers',
-			'Knights', 'Melody Makers', 'Millers', 'Pennsylvanians',
-			'Plainsmen', 'Ramblers', 'Rangers', 'Rascals', 'Rhythmasters',
-			'Rhythmists', 'Riders', 'Rockers', 'Rogues', 'Rounders',
-			'Slickers', 'Sons of the Golden West', 'Sweethearts', 'Swing Wing',
-			'Syncopaters', 'Tornadoes', 'Troopers', 'Twisters', 'Vagabonds',
-			'Westerners', 'Wranglers', 'Yanks',
+			[ 'memberNounsB' ],
+			[ 'memberNounsC' ],
+			[ 'memberNounsD' ],
+			[ 'memberNounsF' ],
+			[ 'memberNounsG' ],
+			[ 'memberNounsH' ],
+			[ 'memberNounsI' ],
+			[ 'memberNounsK' ],
+			[ 'memberNounsM' ],
+			[ 'memberNounsP' ],
+			[ 'memberNounsR' ],
+			[ 'memberNounsS' ],
+			[ 'memberNounsT' ],
+			[ 'memberNounsV' ],
+			[ 'memberNounsW' ],
+			[ 'memberNounsY' ],
 		],
+	},
+	memberNounsB: {
+		items: [
+			'Band', 'Be-Boppers', 'Blazers', 'Blue-Blowers', 'Bluesicians',
+			'Bob Cats', 'Bohemians', 'Bombadiers', 'Boys', 'Briarhoppers',
+		],
+	},
+	memberNounsC: {
+		items: [
+			'Canadians', 'Caroleers', 'Cats', 'Chicagoans', 'Clodhoppers',
+			'Colonels', 'Cornellians', 'Cowboys', 'Cowhands',
+		],
+	},
+	memberNounsD: {
+		items: [
+			'Debs', 'Diamonds', 'Dixielanders', 'Dude Ranchers',
+		],
+	},
+	memberNounsF: {
+		items: [
+			'Feetwarmers',
+		],
+	},
+	memberNounsG: {
+		items: [
+			'Gang', 'Girls', 'Girls of the Golden West', 'Globe Trotters',
+		],
+	},
+	memberNounsH: {
+		items: [
+			'Hawaiians', 'Highpointers', 'Hillbillies', 'Hounds', 'Hunters',
+		],
+	},
+	memberNounsI: {
+		items: [
+			'Islanders',
+		],
+	},
+	memberNounsK: {
+		items: [
+			'Knights',
+		],
+	},
+	memberNounsM: {
+		items: [
+			'Melody Makers', 'Millers',
+		],
+	},
+	memberNounsP: {
+		items: [
+			'Pennsylvanians', 'Plainsmen', 'Polkateers',
+		],
+	},
+	memberNounsR: {
+		items: [
+			'Ramblers', 'Ranch Boys', 'Rangers', 'Rascals', 'Rhythmasters',
+			'Rhythmists', 'Riders', 'Rockers', 'Rogues', 'Rounders',
+		],
+	},
+	memberNounsS: {
+		items: [
+			'Serenaders', 'Slickers', 'Sons of the Golden West', 'Stompers',
+			'Sweethearts', 'Swing Wing', 'Syncopaters',
+		],
+	},
+	memberNounsT: {
+		items: [
+			'Texsons', 'Tornadoes', 'Troopers', 'Twisters',
+		],
+	},
+	memberNounsV: {
+		items: [
+			'Vagabonds',
+		],
+	},
+	memberNounsW: {
+		items: [
+			'Westerners', 'Wranglers',
+		],
+	},
+	memberNounsY: {
+		items: [
+			'Yanks',
+		],
+	},
+	siblings: {
+		items: [ 'Brothers', 'Sisters' ],
 	},
 	orchestra: {
 		items: [
@@ -184,12 +398,12 @@ const recipes = {
 		],
 	},
 	orchestraSpecialtyPrefix: {
-		items: [ 'International', 'Specialty' ],
+		items: [ 'International', 'Royal', 'Specialty' ],
 		space: 'after',
 		chance: 5,
 	},
 	orchestraSpecialtyMain: {
-		items: [ 'Dance', 'Concert', 'Folk' ],
+		items: [ 'Calypso', 'Dance', 'Concert', 'Folk' ],
 		space: 'after',
 		chance: 5,
 	},
