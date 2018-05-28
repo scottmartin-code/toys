@@ -28,7 +28,17 @@ function makeRecipe (name) {
 	return out[Math.floor(Math.random() * out.length)];
 }
 
+function bandName () {
+	let out = makeRecipe('bandName');
+
+	const boring = /^(?:\w+ ){1,2}\w+$/;
+
+	if (boring.test(out)) return bandName();
+
+	return out;
+}
+
 module.exports = {
-	bandName: () => { return makeRecipe('bandName'); },
+	bandName,
 	makeRecipe,
 };
