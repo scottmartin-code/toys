@@ -198,11 +198,22 @@ const recipes = {
 		],
 	},
 	honorific: {
-		items: [ '"King of the Polkas"', '"The Crooning Troubador"',
-			'"The Singing Drummer"', '"The Singing Ranger"',
-			'"The Southern Gentleman"', '"The Whispering Cornetist"' ],
+		items: [
+			'"The King of the Polkas"',
+			[ '"The ', 'honorificAdjective', ' ', 'honorificNoun', '"' ],
+		],
 		space: 'before',
 		chance: 30,
+	},
+	honorificAdjective: {
+		items: [
+			'Crooning', 'Singing', 'Southern', 'Whispering',
+		],
+	},
+	honorificNoun: {
+		items: [
+			'Cornetist', 'Drummer', 'Gentleman', 'Ranger', 'Troubador',
+		],
 	},
 	instrument: {
 		items: [
