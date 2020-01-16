@@ -7,6 +7,7 @@ const recipes = {
 			// [ 'alliterativeBand' ],
 			// [ 'femaleLeaderAndHer', 'instrument' ],
 			// [ 'maleLeaderAndHis', 'instrument' ],
+			// [ 'leaderSingularPossessive', ' Original ', 'bandLabel' ]
 		],
 	},
 	leaderPossessiveOrThe: {
@@ -63,7 +64,7 @@ const recipes = {
 		items: [ [ 'femaleFirstName', ' ', 'lastName' ] ],
 	},
 	adjective: {
-		items: [ 'Jolly', 'Smilin\'', 'General' ],
+		items: [ 'Cactus', 'General', 'Jolly', 'Smilin\'' ],
 		space: 'after',
 		chance: 20,
 	},
@@ -92,7 +93,7 @@ const recipes = {
 		items: [
 			'A.', 'B.', 'C.', 'D.', 'E.', 'F.', 'G.', 'H.', 'I.', 'J.', 'K.',
 			'L.', 'M.', 'N.', 'O.', 'P.', 'Q.', 'R.', 'S.', 'T.', 'U.', 'V.',
-			'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"',
+			'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"', '"Stomp"',
 		],
 		space: 'after',
 		chance: 27,
@@ -255,10 +256,12 @@ const recipes = {
 	place: {
 		items: [
 			'Beaver Valley', 'Buffalo', 'Casa Loma', 'Campus', 'City',
-			'Club Maurice', 'Colorado', 'Farm', 'Georgia', 'Grand Canyon',
-			'Hollywood', 'Kentucky', 'Louisiana', 'Michigan', 'Motor City',
-			'Mound City', 'New Orleans', 'Pecos River', 'Prairie', 'Red River',
-			'Santa Fe', 'Shadyside', 'Smoky Mountain', 'Texas', 'Valley',
+			'Club Maurice', 'Colorado', 'Farm', 'Georgia', 'Goosetown',
+			'Grand Canyon', 'Hollywood', 'Kentucky', 'Louisiana', 'Manhattan',
+			'Michigan', 'Motor City', 'Mound City', 'Nankin', 'New Orleans',
+			'Oklahoma', 'Pecos River', 'Prairie', 'Quaker City', 'Red River',
+			'Rocky Road', 'Santa Fe', 'Shadyside', 'Smoky Mountain',
+			'Tennessee', 'Texas', 'Valley',
 		],
 	},
 	instrumentOptional: {
@@ -269,18 +272,19 @@ const recipes = {
 	bandNumeric: {
 		items: [
 			'Band', 'Ensemble', 'Five', 'Trio', 'Quartet', 'Quartette',
-			'Quintet', 'Sax-O-Tette', 'Sextet', 'Symphonette',
+			'Quintet', 'Sax-O-Tette', 'Sextet', 'Strings', 'Symphonette',
 		],
 	},
 	memberNounPrefix: {
 		items: [
 			'All Star', 'Barn Dance', 'Bashful', 'Bearcats', 'Black and White',
 			'Blue Grass', 'Boogie Woogie', 'Boulevard', 'Buster Brown',
-			'Cabin', 'Cactus', 'Cool', 'Cowboy', 'Dependable', 'Dixie Lily',
+			'Cabin', 'Cactus', 'Cool', 'Cowboy', 'Crazy', 'Dependable', 'Dixie Lily',
 			'Famous', 'Happiness', 'Hot', 'Hot Box', 'House', 'Jazz',
 			'Jolly', 'Jungle', 'Lucky', 'Master', 'Melody', 'Moana', 'Musical',
-			'Novelty', 'Peerless', 'Polka', 'Radio', 'Rainbow', 'Rambling',
-			'Rhythm', 'Round Up', 'Royal', 'Statler', 'Tivoli', 'Varsity',
+			'Old Hickory', 'Novelty', 'Peerless', 'Pick-A-Rib', 'Polka', 'Radio',
+			'Rainbow', 'Rambling', 'Rhythm', 'Round Up', 'Royal', 'Statler',
+			'Swinging', 'Tailgate', 'Tivoli', 'Torrid', 'Varsity', 'Western'
 		],
 	},
 	memberNounNumericPrefix: {
@@ -295,6 +299,7 @@ const recipes = {
 			[ 'memberNounsG' ],
 			[ 'memberNounsH' ],
 			[ 'memberNounsI' ],
+			[ 'memberNounsJ' ],
 			[ 'memberNounsK' ],
 			[ 'memberNounsM' ],
 			[ 'memberNounsP' ],
@@ -320,7 +325,7 @@ const recipes = {
 	},
 	memberNounsD: {
 		items: [
-			'Debs', 'Diamonds', 'Dixielanders', 'Dude Ranchers',
+			'Dance Makers', 'Debs', 'Diamonds', 'Dixielanders', 'Dude Ranchers',
 		],
 	},
 	memberNounsF: {
@@ -343,6 +348,11 @@ const recipes = {
 			'Islanders',
 		],
 	},
+	memberNounsJ: {
+		items: [
+			'Jesters',
+		],
+	},
 	memberNounsK: {
 		items: [
 			'Knights',
@@ -350,12 +360,13 @@ const recipes = {
 	},
 	memberNounsM: {
 		items: [
-			'Melody Makers', 'Millers',
+			'Melody Makers', 'Merrymakers', 'Millers', 'Millionaires of Rhythm',
+			'Music',
 		],
 	},
 	memberNounsP: {
 		items: [
-			'Pennsylvanians', 'Plainsmen', 'Polkateers',
+			'Pardners', 'Pennsylvanians', 'Plainsmen', 'Polkateers', 'Pricklypears',
 		],
 	},
 	memberNounsR: {
@@ -366,13 +377,14 @@ const recipes = {
 	},
 	memberNounsS: {
 		items: [
-			'Serenaders', 'Slickers', 'Sons of the Golden West', 'Stompers',
-			'Sweethearts', 'Swing Wing', 'Syncopaters',
+			'Sagedusters', 'Serenaders', 'Singers', 'Slickers', 'Sons of the Golden West',
+			'Stompers', 'String Band', 'Sweethearts', 'Swing Wing', 'Swingsters',
+			'Syncopaters',
 		],
 	},
 	memberNounsT: {
 		items: [
-			'Texsons', 'Tornadoes', 'Troopers', 'Twisters',
+			'Tennesseans', 'Texsons', 'Tornadoes', 'Troopers', 'Tu-Tones', 'Twisters',
 		],
 	},
 	memberNounsV: {
@@ -409,12 +421,15 @@ const recipes = {
 		],
 	},
 	orchestraSpecialtyPrefix: {
-		items: [ 'International', 'Royal', 'Specialty' ],
+		items: [
+			'Cafe', 'Continental', 'Elite', 'Hotel Astor', 'International',
+			'Jazzarimba', 'Million Dollar', 'Royal', 'Specialty',
+		],
 		space: 'after',
 		chance: 5,
 	},
 	orchestraSpecialtyMain: {
-		items: [ 'Calypso', 'Dance', 'Concert', 'Folk' ],
+		items: [ 'Calypso', 'Concert', 'Dance', 'Folk', 'Hilo Hawaiian', 'Pier', 'Waltz' ],
 		space: 'after',
 		chance: 5,
 	},
