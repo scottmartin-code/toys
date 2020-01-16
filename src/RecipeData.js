@@ -1,13 +1,21 @@
+/*
+
+TODO: The following to appear infrequently
+[ 'memberNounNumericPrefix', ' ', 'lastName', ' ', 'siblings' ],
+[ 'alliterativeBand' ],
+[ 'femaleLeaderAndHer', 'instrument' ],
+[ 'maleLeaderAndHis', 'instrument' ],
+[ 'leaderSingularPossessive', ' Original ', 'bandLabel' ]
+
+TODO: orchestraSpecialtyPrefix -> specialtyPrefix
+TODO: X Orchestra of <place>
+
+*/
+
 const recipes = {
 	bandName: {
 		items: [
 			[ 'leaderPossessiveOrThe', 'bandLabel' ],
-			// The following to appear infrequently
-			// [ 'memberNounNumericPrefix', ' ', 'lastName', ' ', 'siblings' ],
-			// [ 'alliterativeBand' ],
-			// [ 'femaleLeaderAndHer', 'instrument' ],
-			// [ 'maleLeaderAndHis', 'instrument' ],
-			// [ 'leaderSingularPossessive', ' Original ', 'bandLabel' ]
 		],
 	},
 	leaderPossessiveOrThe: {
@@ -70,23 +78,27 @@ const recipes = {
 	},
 	maleFirstName: {
 		items: [
-			'Abbey', 'Albert', 'Arthur', 'Bill', 'Bob', 'Bobby', 'Buddy',
-			'Bull Moose', 'Carter', 'Clyde', 'Donnie', 'Eddie', 'Edward',
-			'Edwin', 'Earl', 'Frank', 'Fred', 'Gene', 'George', 'Glen', 'Hank',
-			'Hector', 'Henry', 'Howard', 'Jack', 'James', 'John', 'Johnnie',
-			'Johnny', 'Karl', 'Louis', 'Lowell', 'Mitchell', 'Ollie', 'Oscar',
-			'Pee Wee', 'Ray', 'Red', 'Robin', 'Roger', 'Rusty', 'Sammy',
-			'Scotty', 'Seymour', 'Sonny', 'Stuff', 'Tab', 'Ted', 'Thomas',
-			'Vaughn', 'Walter', 'Wayne', 'Wendell', 'Wilbert', 'Willie',
-			'Wilson',
+			'Abbey', 'Albert', 'Arthur', 'Bill', 'Bob', 'Bobby', 'Bud',
+			'Buddy', 'Bull Moose', 'Carter', 'Clyde', 'Curly', 'Donnie', 'Earl',
+			'Eddie', 'Eddy', 'Edward', 'Edwin', 'Ernest', 'Frank', 'Frankie',
+			'Fred', 'Freddie', 'Fritz', 'Gene', 'George', 'Glen', 'Hank',
+			'Hector', 'Henry', 'Hot Lips', 'Howard', 'Jack', 'James', 'John',
+			'Johnnie', 'Johnny', 'Karl', 'Louis', 'Lowell', 'Mickey',
+			'Mitchell', 'Ollie', 'Oscar', 'Pee Wee', 'Ray', 'Red', 'Robin',
+			'Roger', 'Rusty', 'Sammy', 'Scotty', 'Seymour', 'Smokey', 'Sonny',
+			'Stuff', 'Tab', 'Ted', 'Thomas', 'Tiny', 'Vaughn', 'Walter',
+			'Wayne', 'Wendell', 'Wilbert', 'Willie', 'Wilson',
 		],
 	},
 	femaleFirstName: {
 		items: [
-			'Anita', 'Bessie', 'Carrie', 'Connie', 'Ellen', 'Ginny', 'Gloria',
-			'Helen', 'June', 'Kitty', 'Louise', 'Margaret', 'Marie', 'Marion',
-			'Martha', 'Mary', 'Maxine', 'Nellie', 'Olive', 'Rosetta', 'Ruby',
-			'Shannon', 'Virginia', 'Vivian',
+			'Anita', 'Ann', 'Bessie', 'Carrie', 'Cindy', 'Connie', 'Dolly',
+			'Dorothy', 'Elizabeth', 'Ellen', 'Elsie', 'Ethel', 'Evelyn',
+			'Georgia', 'Ginny', 'Gloria',, 'Helen', 'Irene', 'Jane', 'June',
+			'Kelly', 'Kitty', 'Lauren', 'Louise', 'Lucy', 'Lynn', 'Margaret',
+			'Marie', 'Marion',, 'Martha', 'Mary', 'Maxine', 'Merline',
+			'Nellie', 'Nora', 'Olive', 'Patsy', 'Rosetta', 'Rosy', 'Ruby',
+			'Sally', 'Shannon', 'Sibyl', 'Virginia', 'Vivian',
 		],
 	},
 	middleInitialOrNickname: {
@@ -256,12 +268,13 @@ const recipes = {
 	place: {
 		items: [
 			'Beaver Valley', 'Buffalo', 'Casa Loma', 'Campus', 'City',
-			'Club Maurice', 'Colorado', 'Farm', 'Georgia', 'Goosetown',
-			'Grand Canyon', 'Hollywood', 'Kentucky', 'Louisiana', 'Manhattan',
-			'Michigan', 'Motor City', 'Mound City', 'Nankin', 'New Orleans',
-			'Oklahoma', 'Pecos River', 'Prairie', 'Quaker City', 'Red River',
-			'Rocky Road', 'Santa Fe', 'Shadyside', 'Smoky Mountain',
-			'Tennessee', 'Texas', 'Valley',
+			'Club Maurice', 'Colorado', 'Farm', 'Friars Inn', 'Georgia',
+			'Goosetown', 'Grand Canyon', 'Goosetown', 'Hollywood', 'Hotel Astor',
+			'Kansas City', 'Kentucky', 'Louisiana', 'Manhattan', 'Michigan',
+			'Motor City', 'Mound City', 'Nankin', 'New Orleans', 'Oklahoma',
+			'Pecos River', 'Prairie', 'Quaker City', 'Red River', 'Rocky Road',
+			'Santa Fe', 'Shadyside', 'Smoky Mountain', 'Tennessee', 'Texas',
+			'Valley',
 		],
 	},
 	instrumentOptional: {
@@ -278,13 +291,14 @@ const recipes = {
 	memberNounPrefix: {
 		items: [
 			'All Star', 'Barn Dance', 'Bashful', 'Bearcats', 'Black and White',
-			'Blue Grass', 'Boogie Woogie', 'Boulevard', 'Buster Brown',
-			'Cabin', 'Cactus', 'Cool', 'Cowboy', 'Crazy', 'Dependable', 'Dixie Lily',
-			'Famous', 'Happiness', 'Hot', 'Hot Box', 'House', 'Jazz',
-			'Jolly', 'Jungle', 'Lucky', 'Master', 'Melody', 'Moana', 'Musical',
-			'Old Hickory', 'Novelty', 'Peerless', 'Pick-A-Rib', 'Polka', 'Radio',
-			'Rainbow', 'Rambling', 'Rhythm', 'Round Up', 'Royal', 'Statler',
-			'Swinging', 'Tailgate', 'Tivoli', 'Torrid', 'Varsity', 'Western'
+			'Blue Denim', 'Blue Grass', 'Boogie Woogie', 'Boulevard',
+			'Buster Brown', 'Cabin', 'Cactus', 'Cool', 'Cowboy', 'Crazy',
+			'Dependable', 'Dixie Lily', 'Famous', 'Happiness', 'Hot', 'Hot Box',
+			'House', 'Jazz', 'Jolly', 'Jungle', 'Lucky', 'Master', 'Melody',
+			'Moana', 'Musical', 'Old Hickory', 'Novelty', 'Peerless',
+			'Pick-A-Rib', 'Polka', 'Radio', 'Rainbow', 'Rambling', 'Rhythm',
+			'Round Up', 'Royal', 'Skyline', 'Statler', 'Swinging', 'Tailgate',
+			'Tivoli', 'Torrid', 'Varsity', 'Western',
 		],
 	},
 	memberNounNumericPrefix: {
@@ -319,8 +333,9 @@ const recipes = {
 	},
 	memberNounsC: {
 		items: [
-			'Canadians', 'Caroleers', 'Cats', 'Chicagoans', 'Clodhoppers',
-			'Colonels', 'Cornellians', 'Cowboys', 'Cowhands',
+			'Canadians', 'Caravan', 'Caroleers', 'Cats', 'Cats and Jammers',
+			'Chicagoans', 'Clodhoppers', 'Colonels', 'Cornellians', 'Cowboys',
+			'Cowhands', 'Crazy Tennesseans',
 		],
 	},
 	memberNounsD: {
@@ -366,7 +381,8 @@ const recipes = {
 	},
 	memberNounsP: {
 		items: [
-			'Pardners', 'Pennsylvanians', 'Plainsmen', 'Polkateers', 'Pricklypears',
+			'Pardners', 'Pennsylvanians', 'Plainsmen', 'Polkateers',
+			'Pricklypears',
 		],
 	},
 	memberNounsR: {
@@ -377,14 +393,15 @@ const recipes = {
 	},
 	memberNounsS: {
 		items: [
-			'Sagedusters', 'Serenaders', 'Singers', 'Slickers', 'Sons of the Golden West',
-			'Stompers', 'String Band', 'Sweethearts', 'Swing Wing', 'Swingsters',
-			'Syncopaters',
+			'Sagedusters', 'Serenaders', 'Singers', 'Slickers',
+			'Sons of the Golden West', 'Stompers', 'String Band', 'Strings',
+			'Sweethearts', 'Swing Wing', 'Swingsters', 'Syncopaters',
 		],
 	},
 	memberNounsT: {
 		items: [
-			'Tennesseans', 'Texsons', 'Tornadoes', 'Troopers', 'Tu-Tones', 'Twisters',
+			'Tennesseans', 'Texsons', 'Tornadoes', 'Troopers', 'Tu-Tones',
+			'Twisters',
 		],
 	},
 	memberNounsV: {
@@ -422,19 +439,25 @@ const recipes = {
 	},
 	orchestraSpecialtyPrefix: {
 		items: [
-			'Cafe', 'Continental', 'Elite', 'Hotel Astor', 'International',
-			'Jazzarimba', 'Million Dollar', 'Royal', 'Specialty',
+			'Arcadia Peacock', 'Benson', 'Continental', 'Elite',
+			'Hotel Astor', 'Hour of Charm', 'International', 'Jazzarimba',
+			'Million Dollar', 'Party Dance', 'Royal', 'Specialty', 'Victor',
 		],
 		space: 'after',
 		chance: 5,
 	},
 	orchestraSpecialtyMain: {
-		items: [ 'Calypso', 'Concert', 'Dance', 'Folk', 'Hilo Hawaiian', 'Pier', 'Waltz' ],
+		items: [
+			'All-Girl', 'Cafe', 'Calypso', 'Concert', 'Dance', 'Folk',
+			'Hilo Hawaiian', 'Pier', 'Rainbo',  'Salon', 'Waltz',
+		],
 		space: 'after',
 		chance: 5,
 	},
 	orchestraSuffix: {
-		items: [ 'De Luxe' ],
+		items: [
+			'and Choir', 'De Luxe',
+		],
 		space: 'before',
 		chance: 10,
 	},
