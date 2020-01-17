@@ -72,8 +72,8 @@ const recipes = {
 		items: [ [ 'femaleFirstName', ' ', 'lastName' ] ],
 	},
 	adjective: {
-		items: [ 'Cactus', 'General', 'Jolly', 'Smilin\'' ],
-		space: 'after',
+		items:  [ 'Cactus', 'General', 'Jolly', 'Smilin\'' ],
+		space:  'after',
 		chance: 20,
 	},
 	maleFirstName: {
@@ -94,9 +94,9 @@ const recipes = {
 		items: [
 			'Anita', 'Ann', 'Bessie', 'Carrie', 'Cindy', 'Connie', 'Dolly',
 			'Dorothy', 'Elizabeth', 'Ellen', 'Elsie', 'Ethel', 'Evelyn',
-			'Georgia', 'Ginny', 'Gloria',, 'Helen', 'Irene', 'Jane', 'June',
+			'Georgia', 'Ginny', 'Gloria', 'Helen', 'Irene', 'Jane', 'June',
 			'Kelly', 'Kitty', 'Lauren', 'Louise', 'Lucy', 'Lynn', 'Margaret',
-			'Marie', 'Marion',, 'Martha', 'Mary', 'Maxine', 'Merline',
+			'Marie', 'Marion', 'Martha', 'Mary', 'Maxine', 'Merline',
 			'Nellie', 'Nora', 'Olive', 'Patsy', 'Rosetta', 'Rosy', 'Ruby',
 			'Sally', 'Shannon', 'Sibyl', 'Virginia', 'Vivian',
 		],
@@ -107,7 +107,7 @@ const recipes = {
 			'L.', 'M.', 'N.', 'O.', 'P.', 'Q.', 'R.', 'S.', 'T.', 'U.', 'V.',
 			'W.', 'X.', 'Y.', 'Z.', '"Red"', '"Scat"', '"Stomp"',
 		],
-		space: 'after',
+		space:  'after',
 		chance: 27,
 	},
 	lastName: {
@@ -215,7 +215,7 @@ const recipes = {
 			'"The King of the Polkas"',
 			[ '"The ', 'honorificAdjective', ' ', 'honorificNoun', '"' ],
 		],
-		space: 'before',
+		space:  'before',
 		chance: 30,
 	},
 	honorificAdjective: {
@@ -278,8 +278,8 @@ const recipes = {
 		],
 	},
 	instrumentOptional: {
-		items: [ 'Jug', 'Marimba', 'Saxophone', 'Tympany' ],
-		space: 'after',
+		items:  [ 'Jug', 'Marimba', 'Saxophone', 'Tympany' ],
+		space:  'after',
 		chance: 20,
 	},
 	bandNumeric: {
@@ -443,24 +443,24 @@ const recipes = {
 			'Hotel Astor', 'Hour of Charm', 'International', 'Jazzarimba',
 			'Million Dollar', 'Party Dance', 'Royal', 'Specialty', 'Victor',
 		],
-		space: 'after',
+		space:  'after',
 		chance: 5,
 	},
 	orchestraSpecialtyMain: {
 		items: [
 			'All-Girl', 'Cafe', 'Calypso', 'Concert', 'Dance', 'Folk',
-			'Hilo Hawaiian', 'Pier', 'Rainbo',  'Salon', 'Waltz',
+			'Hilo Hawaiian', 'Pier', 'Rainbo', 'Salon', 'Waltz',
 		],
-		space: 'after',
+		space:  'after',
 		chance: 5,
 	},
 	orchestraSuffix: {
 		items: [
 			'and Choir', 'De Luxe',
 		],
-		space: 'before',
+		space:  'before',
 		chance: 10,
 	},
-};
+}
 
-module.exports = recipes;
+module.exports = recipes

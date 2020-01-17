@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "dev": "webpack --mode=development --config=webpack.config.js",
+    "build": "webpack --mode=production --config=webpack.config.js"
   },
   "author": "Scott Martin <scott@scottmartin.systems>",
   "license": "ISC",
@@ -15,44 +15,42 @@
   },
   "babel": {
     "presets": [
-      "@babel/react",
       "@babel/env"
     ]
   },
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-redux": "^5.0.7",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
     "twit": "^2.2.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/preset-react": "^7.8.3",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
+    "css-loader": "^3.3.2",
     "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
     "eslint-loader": "^3.0.3",
-    "eslint-plugin-react": "^7.18.0",
-    "jest": "^24.9.0",
-    "react-test-renderer": "^16.12.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "style-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "svelte": "^3.16.4",
+    "svelte-loader": "^2.13.6",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scottmartin-code/vintage-bands.git"
-  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git+https://github.com/scottdotjs/vintage-bands.git"
+    }
+  ],
   "bugs": {
-    "url": "https://github.com/scottmartin-code/vintage-bands/issues"
+    "url": "https://github.com/scottdotjs/vintage-bands/issues"
   },
-  "homepage": "https://github.com/scottmartin-code/vintage-bands#readme",
-  "directories": {
-    "lib": "lib"
-  }
+  "homepage": "https://github.com/scottdotjs/vintage-bands#readme"
 }
