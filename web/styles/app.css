@@ -16,7 +16,7 @@ main {
 }
 
 .label {
-	background-image: url(label.jpg);
+	background-image: url(../images/label.jpg);
 	background-repeat: none;
 	width: 500px;
 	height: 500px;
