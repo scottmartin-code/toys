@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = (env, argv) => {
 	return {
-		entry: './src/svelte/index.js', 	
+		entry:   './src/svelte/index.js',
 		resolve: {
 			alias: {
 				svelte: path.resolve('node_modules', 'svelte'),
@@ -15,9 +15,9 @@ module.exports = (env, argv) => {
 			filename: 'app.js',
 			path:     path.join(__dirname, '/web/js'),
 		},
-		mode: argv.mode,
+		mode:    argv.mode,
 		devtool: argv.mode === 'production' ? false : 'source-map',
-		module: {
+		module:  {
 			rules: [
 				{
 					test: /\.css$/,
@@ -28,13 +28,13 @@ module.exports = (env, argv) => {
 						'css-loader',
 					],
 				}, {
-					test: /\.js$/,
+					test:    /\.js$/,
 					exclude: /(node_modules)/,
-					loader: require.resolve('babel-loader'),
+					loader:  require.resolve('babel-loader'),
 				}, {
-					test: /\.js$/,
+					test:    /\.js$/,
 					exclude: /(node_modules)/,
-					loader: 'eslint-loader',
+					loader:  'eslint-loader',
 					options: {
 						fix: true,
 					},
@@ -43,12 +43,12 @@ module.exports = (env, argv) => {
 					use:  {
 						loader:  'svelte-loader',
 						options: {
-							dev: argv.mode === 'development' ? true : false,
+							dev:       argv.mode === 'development' ? true : false,
 							emitCss:   true,
 							hotReload: true,
 						},
 					},
-				}
+				},
 			],
 		},
 		plugins: [
