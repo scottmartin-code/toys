@@ -19,7 +19,7 @@ function makeRecipe (name) {
 			return recipe.space === 'before' ? ` ${item}` : `${item} `
 		})
 
-		out = [ ...spaced, ...Array.from({ length: recipe.chance }, (v, i) => '') ]
+		out = [ ...spaced, ...Array.from({ length: recipe.chance }, () => '') ]
 	} else
 		out = [ ...recipeItems ]
 
