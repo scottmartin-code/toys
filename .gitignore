@@ -1,4 +1,3 @@
 node_modules/
 .envrc
-vintage-bands.sublime-project
-vintage-bands.sublime-workspace
+web/js/app.js.map
