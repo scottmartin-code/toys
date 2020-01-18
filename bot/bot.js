@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-const Twit = require('twit');
-const { bandName } = require('../src/BandName.js');
+const Twit = require('twit')
+const { bandName } = require('../src/BandName.js')
 
 if (!process.env.PRODUCTION) {
-	console.log(bandName());
-	process.exit(0);
+	console.log(bandName())
+	process.exit(0)
 }
 
-let twitter;
+let twitter
 
 try {
 	twitter = new Twit({
@@ -16,22 +16,22 @@ try {
 		consumer_secret:     process.env.TWITTER_CONSUMER_SECRET,
 		access_token:        process.env.TWITTER_ACCESS_TOKEN,
 		access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
-	});
-} catch (err) {
-	throw new Error('Problem initializing Twit:', error.message);
+	})
+} catch (error) {
+	throw new Error('Problem initializing Twit:', error.message)
 }
 
 // Post on startup
-tweet();
+tweet()
 
-setInterval(tweet, 60 * 60 * 1000);
+setInterval(tweet, 60 * 60 * 1000)
 
 function tweet () {
-	twitter.post('statuses/update', { status: bandName() }, tweeted);
+	twitter.post('statuses/update', { status: bandName() }, tweeted)
 
-	function tweeted(error, data, response) {
-		if (error) throw new Error('Problem trying to tweet:', error.message);
+	function tweeted (error, data, response) {
+		if (error) throw new Error('Problem trying to tweet:', error.message)
 
-		console.log('Tweeted: ' + data.text);
+		console.log('Tweeted: ' + data.text)
 	}
 }
