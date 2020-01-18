@@ -1,4 +1,4 @@
-const recipes = require('./RecipeData.js')
+import { recipes } from './recipes.js'
 
 function makeRecipe (name) {
 	const recipe = recipes[name]
@@ -26,7 +26,7 @@ function makeRecipe (name) {
 	return out[Math.floor(Math.random() * out.length)]
 }
 
-function bandName () {
+export function bandName () {
 	const out = makeRecipe('bandName')
 
 	const boring = /^(?:\w+ ){1,2}\w+$/
@@ -34,9 +34,4 @@ function bandName () {
 	if (boring.test(out)) return bandName()
 
 	return out
-}
-
-module.exports = {
-	bandName,
-	makeRecipe,
 }
