@@ -4,6 +4,24 @@ export const names = {
 		space:  'after',
 		chance: 20,
 	},
+	femaleName: {
+		items: [ [ 'femaleFirstName', ' ', 'lastName' ] ],
+	},
+	maleName: {
+		items: [
+			[ 'adjective', 'maleFirstName', ' ', 'lastName', 'honorific' ],
+			[
+				'maleFirstName', ' ', 'middleInitialOrNickname', 'lastName',
+				'honorific',
+			],
+		],
+		rareItems: [
+			{
+				items:  [ '"Happy" ', 'maleFirstNameH', 'lastNameH' ],
+				chance: 50,
+			},
+		],
+	},
 	femaleFirstName: {
 		items: [
 			[ 'femaleFirstNameA' ], [ 'femaleFirstNameB' ], [ 'femaleFirstNameC' ],

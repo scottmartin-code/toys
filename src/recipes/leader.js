@@ -16,39 +16,27 @@ export const leader = {
 			[ 'leaderName', ' with the ' ],
 		],
 	},
+	leaderName: {
+		items: [ [ 'maleName' ], [ 'femaleName' ] ],
+	},
 	femaleLeaderAndHer: {
 		items: [
-			[ 'femaleLeaderName', ' and her ' ],
+			[ 'femaleName', ' and her ' ],
 		],
 	},
 	maleLeaderAndHis: {
 		items: [
-			[ 'maleLeaderName', ' and his ' ],
+			[ 'maleName', ' and his ' ],
 		],
 	},
 	leaders: {
 		items: [
-			[ 'maleLeaderName', ' and ', 'maleLeaderName' ],
-			[ 'maleFirstName', ' and ', 'maleLeaderName' ],
-			[ 'femaleFirstName', ' and ', 'femaleLeaderName' ],
+			[ 'maleName', ' and ', 'maleName' ],
+			[ 'maleFirstName', ' and ', 'maleName' ],
+			[ 'femaleFirstName', ' and ', 'femaleName' ],
 			[ 'lastName', ' and ', 'lastName' ],
 			[ 'The ', 'lastName', ' ', 'siblings' ],
 			[ 'The King\'s Jesters' ],
-		],
-	},
-	leaderName: {
-		items: [ [ 'maleLeaderName' ], [ 'femaleLeaderName' ] ],
-	},
-	femaleLeaderName: {
-		items: [ [ 'femaleFirstName', ' ', 'lastName' ] ],
-	},
-	maleLeaderName: {
-		items: [
-			[ 'adjective', 'maleFirstName', ' ', 'lastName', 'honorific' ],
-			[
-				'maleFirstName', ' ', 'middleInitialOrNickname', 'lastName',
-				'honorific',
-			],
 		],
 	},
 	siblings: {
