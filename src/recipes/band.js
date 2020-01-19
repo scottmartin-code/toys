@@ -39,7 +39,7 @@ export const band = {
 			'Tailgate', 'Tivoli', 'Torrid', 'Varsity', 'Western',
 		],
 	},
-	memberNounNumericPrefix: {
+	number: {
 		items: [ 'Three', 'Four', 'Five', 'Six', 'Seven' ],
 	},
 	memberNouns: {
@@ -95,7 +95,8 @@ export const band = {
 	},
 	memberNounsH: {
 		items: [
-			'Hawaiians', 'Highpointers', 'Hillbillies', 'Hounds', 'Hunters',
+			'Hawaiians', 'Highpointers', 'Hillbillies', 'Home Boys', 'Hounds',
+			'Hunters',
 		],
 	},
 	memberNounsI: {
@@ -115,13 +116,14 @@ export const band = {
 	},
 	memberNounsM: {
 		items: [
-			'Melody Makers', 'Merry Madcaps', 'Merrymakers', 'Millers',
-			'Millionaires of Rhythm', 'Music', 'Music Box Band',
+			'Melody Artists', 'Melody Makers', 'Merry Madcaps', 'Merrymakers',
+			'Millers', 'Millionaires of Rhythm', 'Mountaineers', 'Music',
+			'Music Box Band',
 		],
 	},
 	memberNounsP: {
 		items: [
-			'Pardners', 'Pennsylvanians', 'Plainsmen', 'Polkateers',
+			'Pardners', 'Pennsylvanians', 'Pioneers', 'Plainsmen', 'Polkateers',
 			'Pricklypears',
 		],
 	},
