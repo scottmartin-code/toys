@@ -1,18 +1,3 @@
-/*
-
-TODO: The following to appear infrequently
-[ 'memberNounNumericPrefix', ' ', 'lastName', ' ', 'siblings' ],
-[ 'alliterativeBand' ],
-[ 'femaleLeaderAndHer', 'instrument' ],
-[ 'maleLeaderAndHis', 'instrument' ],
-[ 'leaderSingularPossessive', ' Original ', 'bandLabel' ]
-[ 'leaderName', ' with string band']
-
-TODO: orchestraSpecialtyPrefix -> specialtyPrefix
-TODO: X Orchestra of <place>
-
-*/
-
 import { band }      from './recipes/band.js'
 import { leader }    from './recipes/leader.js'
 import { names }     from './recipes/names.js'
@@ -24,6 +9,14 @@ const base = {
 		items: [
 			[ 'leaderPossessiveOrThe', 'bandLabel' ],
 		],
+		rareItems: [
+			[ 'femaleLeaderAndHer', 'instrument' ],
+			[ 'maleLeaderAndHis', 'instrument' ],
+			[ 'leaderSingularPossessive', ' Original ', 'bandLabel' ],
+			[ 'leaderName', ' with string band' ],
+			[ 'alliterativeBand' ],
+			[ 'number', ' ', 'lastName', ' ', 'siblings' ],
+		],
 	},
 	bandLabel: {
 		items: [
@@ -31,7 +24,7 @@ const base = {
 			[ 'memberNounPrefix', ' ', 'memberNouns' ],
 			[ 'place', ' ', 'memberNounPrefix', ' ', 'memberNouns' ],
 			[ 'place', ' ', 'memberNouns' ],
-			[ 'memberNounNumericPrefix', ' ', 'memberNouns' ],
+			[ 'number', ' ', 'memberNouns' ],
 			[ 'memberNounPrefix', ' ', 'bandNumeric' ],
 			[ 'instrumentOptional', 'bandNumeric' ],
 			[ 'bandNumeric' ],
@@ -40,8 +33,11 @@ const base = {
 			[ 'orchestra' ],
 			[ 'orchestra' ],
 		],
+		rareItems: [
+			[ 'Big', 'number' ],
+		],
 	},
-	instrument: { // Not in use yet
+	instrument: {
 		items: [
 			'Clarinet', 'Guitar', 'Jug', 'Trombone', 'Trumpet',
 		],
