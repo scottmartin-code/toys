@@ -1,10 +1,10 @@
 'use strict'
 
 const Twit = require('twit')
-const { bandName } = require('../src/BandName.js')
+const { generate } = require('../src/generator.js')
 
 if (!process.env.PRODUCTION) {
-	console.log(bandName())
+	console.log(generate())
 	process.exit(0)
 }
 
@@ -27,7 +27,7 @@ tweet()
 setInterval(tweet, 60 * 60 * 1000)
 
 function tweet () {
-	twitter.post('statuses/update', { status: bandName() }, tweeted)
+	twitter.post('statuses/update', { status: generate() }, tweeted)
 
 	function tweeted (error, data, response) {
 		if (error) throw new Error('Problem trying to tweet:', error.message)

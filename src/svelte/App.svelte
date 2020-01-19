@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from 'svelte'
-	import { bandName } from '../BandName.js'
+	import { generate } from '../generator.js'
 
 	export let band
 
-	function updateBand () { band = bandName() }
+	function updateBand () { band = generate() }
 
 	onMount( () => { updateBand() })
 </script>
