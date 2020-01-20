@@ -15,7 +15,7 @@ function makeRecipe (name) {
 
 	let itemsToProcess = recipe.items
 
-	if (recipe.rare && random(recipe.rare.chance) === 1)
+	if (recipe.rare && getChance(recipe.rare.chance))
 		itemsToProcess = recipe.rare.items
 
 	const recipeItems = itemsToProcess.map( item => {
@@ -30,7 +30,7 @@ function makeRecipe (name) {
 	if (recipe.chance) {
 		let out = ''
 
-		if (random(recipe.chance) === 1) {
+		if (getChance(recipe.chance)) {
 			out = randomItem(recipeItems)
 			out = recipe.space === 'before' ? ` ${out}` : `${out} `
 		}
@@ -38,6 +38,10 @@ function makeRecipe (name) {
 		return out
 	} else
 		return randomItem(recipeItems)
+}
+
+function getChance (chance) {
+	return random(chance) === 1
 }
 
 function randomItem (items) {
