@@ -9,14 +9,17 @@ const base = {
 		items: [
 			[ 'leaderPossessiveOrThe', 'bandLabel' ],
 		],
-		rareItems: [
-			[ 'femaleLeaderAndHer', 'instrument' ],
-			[ 'maleLeaderAndHis', 'instrument' ],
-			[ 'leaderSingularPossessive', ' Original ', 'bandLabel' ],
-			[ 'leaderName', ' with string band' ],
-			[ 'alliterativeBand' ],
-			[ 'number', ' ', 'lastName', ' ', 'siblings' ],
-		],
+		rare: {
+			chance: 50,
+			items:  [
+				[ 'femaleLeaderAndHer', 'instrument' ],
+				[ 'maleLeaderAndHis', 'instrument' ],
+				[ 'leaderSingularPossessive', ' Original ', 'bandLabel' ],
+				[ 'leaderName', ' with string band' ],
+				[ 'alliterativeBand' ],
+				[ 'number', ' ', 'lastName', ' ', 'siblings' ],
+			],
+		},
 	},
 	bandLabel: {
 		items: [
@@ -34,7 +37,7 @@ const base = {
 			[ 'orchestra' ],
 		],
 		rareItems: [
-			[ 'Big', 'number' ],
+			[ 'Big ', 'number' ],
 		],
 	},
 	instrument: {

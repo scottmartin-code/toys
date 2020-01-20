@@ -15,12 +15,12 @@ export const names = {
 				'honorific',
 			],
 		],
-		rareItems: [
-			{
-				items:  [ '"Happy" ', 'maleFirstNameH', 'lastNameH' ],
-				chance: 50,
-			},
-		],
+		rare: {
+			chance: 75,
+			items:  [
+				[ '"Happy" ', 'maleFirstNameH', ' ', 'lastNameH' ],
+			],
+		},
 	},
 	femaleFirstName: {
 		items: [

@@ -5,8 +5,9 @@ export const orchestra = {
 				'place', ' ', 'orchestraSpecialty', 'Orchestra',
 				'orchestraSuffix',
 			],
-			[ 'place', ' ', 'Orchestra', 'orchestraSuffix' ],
+			[ 'place', ' Orchestra', 'orchestraSuffix' ],
 			[ 'orchestraSpecialty', 'Orchestra', 'orchestraSuffix' ],
+			[ 'orchestraSpecialty', 'Orchestra of ', 'place' ],
 		],
 	},
 	orchestraSpecialty: {

@@ -1,5 +1,5 @@
 export const band = {
-	alliterativeBand: { // Not in use yet
+	alliterativeBand: {
 		items: [
 			[ 'lastNameB', '\'s ', 'memberNounsB' ],
 			[ 'lastNameC', '\'s ', 'memberNounsC' ],

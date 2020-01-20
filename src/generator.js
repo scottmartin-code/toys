@@ -13,10 +13,15 @@ export function generate () {
 function makeRecipe (name) {
 	const recipe = recipes[name]
 
-	const recipeItems = recipe.items.map( item => {
-		if (typeof item === 'object')
-			return item.reduce( (acc, r) => {
-				return recipes[r] ? acc + makeRecipe(r) : acc + r
+	let itemsToProcess = recipe.items
+
+	if (recipe.rare && random(recipe.rare.chance) === 1)
+		itemsToProcess = recipe.rare.items
+
+	const recipeItems = itemsToProcess.map( item => {
+		if (Array.isArray(item))
+			return item.reduce( (acc, recipe) => {
+				return recipes[recipe] ? acc + makeRecipe(recipe) : acc + recipe
 			}, '')
 		else
 			return item
