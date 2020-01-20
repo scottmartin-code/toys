@@ -1,15 +1,21 @@
-// TODO: split out prefix-only places
 export const place = {
 	place: {
+		items: [ [ 'generalPlace' ], [ 'prefixPlace' ] ],
+	},
+	generalPlace: {
 		items: [
-			'Beaver Valley', 'Buffalo', 'Casa Loma', 'Campus', 'City',
-			'Club Maurice', 'Colorado', 'Cumberland', 'Farm', 'Friars Inn',
-			'Georgia', 'Goosetown', 'Grand Canyon', 'Goosetown', 'Hollywood',
-			'Hotel Astor', 'Kansas City', 'Kentucky', 'Louisiana', 'Manhattan',
-			'Michigan', 'Motor City', 'Mound City', 'Nankin', 'New Orleans',
-			'Oklahoma', 'Pecos River', 'Pennsylvania', 'Prairie', 'Quaker City',
-			'Red River', 'Rocky Road', 'Santa Fe', 'Shadyside', 'Smoky Mountain',
-			'Tennessee', 'Texas', 'Valley',
+			'Beaver Valley', 'Buffalo', 'Casa Loma', 'Colorado', 'Cumberland',
+			'Georgia', 'Goosetown', 'Goosetown', 'Hollywood', 'Kansas City',
+			'Kentucky', 'Louisiana', 'Manhattan', 'Michigan', 'Motor City',
+			'Mound City', 'New Orleans', 'Oklahoma', 'Pennsylvania',
+			'Quaker City', 'Santa Fe', 'Smoky Mountain', 'Tennessee', 'Texas',
+		],
+	},
+	prefixPlace: {
+		items: [
+			'Campus', 'City', 'Club Maurice', 'Farm', 'Friars Inn',
+			'Grand Canyon', 'Hotel Astor', 'Nankin', 'Pecos River', 'Prairie',
+			'Red River', 'Rocky Road', 'Shadyside', 'Valley',
 		],
 	},
 }
