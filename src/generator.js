@@ -15,7 +15,9 @@ function makeRecipe (name) {
 
 	let itemsToProcess = recipe.items
 
-	if (recipe.rare && getChance(recipe.rare.chance))
+	if (getRareItem(recipe.extraRare))
+		itemsToProcess = recipe.extraRare.items
+	else if (getRareItem(recipe.rare))
 		itemsToProcess = recipe.rare.items
 
 	const recipeItems = itemsToProcess.map( item => {
@@ -38,6 +40,10 @@ function makeRecipe (name) {
 		return out
 	} else
 		return randomItem(recipeItems)
+}
+
+function getRareItem (item) {
+	return item && getChance(item.chance)
 }
 
 function getChance (chance) {

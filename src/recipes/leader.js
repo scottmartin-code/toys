@@ -11,22 +11,45 @@ export const leader = {
 			[ 'femaleLeaderAndHer' ],
 			[ 'maleLeaderAndHis' ],
 			[ 'lastName', '\'s ' ],
-			[ 'leaderName', '\'s ' ],
-			[ 'leaderName', ' and the ' ],
-			[ 'leaderName', ' with the ' ],
+			[ 'leaderName', 'singularPossessiveUngendered' ],
 		],
 	},
 	leaderName: {
-		items: [ [ 'maleName' ], [ 'femaleName' ] ],
+		items: [
+			[ 'maleName' ],
+			[ 'femaleName' ],
+		],
+	},
+	singularPossessiveFemale: {
+		items: [
+			[ ' and her ' ],
+		],
+	},
+	singularPossessiveMale: {
+		items: [
+			[ ' and his ' ],
+		],
+	},
+	pluralPossessive: {
+		items: [
+			[ ' and their ' ],
+		],
+	},
+	singularPossessiveUngendered: {
+		items: [
+			[ '\'s ' ],
+			[ ' and the ' ],
+			[ ' with the ' ],
+		],
 	},
 	femaleLeaderAndHer: {
 		items: [
-			[ 'femaleName', ' and her ' ],
+			[ 'femaleName', 'singularPossessiveFemale' ],
 		],
 	},
 	maleLeaderAndHis: {
 		items: [
-			[ 'maleName', ' and his ' ],
+			[ 'maleName', 'singularPossessiveMale' ],
 		],
 	},
 	leaders: {

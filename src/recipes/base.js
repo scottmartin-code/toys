@@ -14,6 +14,19 @@ export const base = {
 				[ 'number', ' ', 'lastName', ' ', 'siblings' ],
 			],
 		},
+		extraRare: {
+			chance: 100,
+			items:  [
+				[
+					'Happy ', 'lastName', 'singularPossessiveUngendered',
+					'Happy-Go-Lucky ', 'memberNounsH',
+				],
+				[
+					'Rocky ', 'lastName', 'singularPossessiveUngendered',
+					'Rocky Road ', 'memberNounsR',
+				],
+			],
+		},
 	},
 	bandLabel: {
 		items: [
@@ -32,11 +45,6 @@ export const base = {
 		],
 		rareItems: [
 			[ 'Big ', 'number' ],
-		],
-	},
-	instrument: {
-		items: [
-			'Clarinet', 'Guitar', 'Jug', 'Trombone', 'Trumpet',
 		],
 	},
 }
