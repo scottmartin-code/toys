@@ -1,23 +1,35 @@
 @font-face {
 	font-family: "Cantata One";
-	src: url("fonts/CantataOne-regular.woff") format("woff");
+	src: url("../fonts/CantataOne-regular.woff") format("woff");
 }
 
 * {
 	font-family: "Cantata One", serif;
 }
 
+body {
+	margin: 0;
+}
+
 main {
 	height: 100vh;
+}
+
+main, .label {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
+h1, .label {
+	text-align: center;
+}
+
 .label {
 	background-image: url(../images/label.jpg);
-	background-repeat: none;
+	background-repeat: no-repeat;
+	background-size: 100%;
 	width: 500px;
 	height: 500px;
 	margin: 25px 0 0 25px;
@@ -25,9 +37,7 @@ main {
 
 .result {
 	width: 420px;
-	margin: 0 40px;
-	padding-top: 310px;
-	text-align: center;
+	padding-top: 150px;
 	font-weight: bold;
 	font-size: 1.33em;
 	color: #a16d4e;
@@ -35,10 +45,50 @@ main {
 }
 
 .advice {
-	margin-top: -0.5em;
+	margin: -0.5em 0 0.5em 0;
 	font-size: 1.25em;
 }
 
 ::selection {
 	background: transparent;
+}
+
+@media (max-width: 500px) and (min-width: 401px) {
+	h1, .label {
+		width: 414px;
+	}
+
+	.label {
+		margin: 0;
+	}
+
+	.result {
+		width: 370px;
+		padding-top: 40px;
+		font-size: 1.2em;
+	}
+}
+
+@media (max-width: 400px) {
+	h1, .label {
+		width: 370px;
+	}
+
+	h1 {
+		font-size: 1.4em;
+	}
+
+	.advice {
+		font-size: 1em;
+	}
+
+	.label {
+		margin: 0;
+	}
+
+	.result {
+		width: 320px;
+		padding-top: 0;
+		font-size: 1em;
+	}
 }
